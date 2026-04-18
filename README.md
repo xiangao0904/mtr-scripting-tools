@@ -8,7 +8,12 @@
 
 ### 1. Dynamic IntelliSense & Code Completion
 Provides complete code completion for all MTR APIs. [API Document](https://jcm.joban.org/v2.2/dev/scripting)
+![code](https://raw.githubusercontent.com/xiangao0904/mtr-scripting-tools/main/resource/code-completion.png)
 
+### 2. Asset Path Intellisense
+The plugin automatically recognizes resource files in the current working directory.
+Multiple format support: Supports common MTR resource formats such as .png, .obj/.bbmodel, .ogg, and .json.
+![asset](https://raw.githubusercontent.com/xiangao0904/mtr-scripting-tools/main/resource/asset.png)
 ---
 
 ## Todo List
