@@ -1,4 +1,7 @@
 # MTR Scripting Tools
+<a href="https://xiangao0904.github.io/mtr-scripting-tools/"><img src="https://img.shields.io/badge/Page-skyblue" alt="Page"></a>
+<a href="https://marketplace.visualstudio.com/items?itemName=huliawsl.mtr-scripting-tools"><img src="https://img.shields.io/badge/Marketplace-skyblue" alt="Marketplace"></a>
+<a href="https://github.com/xiangao0904/mtr-scripting-tools"><img src="https://img.shields.io/badge/github-repo-blue?logo=github" alt="GitHub"></a>
 
 **MTR Scripting Tools** is a Visual Studio Code extension designed to enhance the development experience for Minecraft Transit Railway (MTR) mod scripting. It provides intelligent code assistance by dynamically loading API definitions to support JavaScript-based MTR scripts.
 
