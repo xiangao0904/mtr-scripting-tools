@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,10 @@
       content="A premium-style homepage for the VS Code extension that streamlines Minecraft Transit Railway scripting workflows."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://xiangao0904.github.io/mtr-scripting-tools/" />
+    <meta
+      property="og:url"
+      content="https://xiangao0904.github.io/mtr-scripting-tools/"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,17 +32,25 @@
       }
 
       body {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         background: #050816;
       }
 
       .grid-bg {
         background-image:
-          linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+          linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 32px 32px;
-        mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent 85%);
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.65), transparent 85%);
+        mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.65),
+          transparent 85%
+        );
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.65),
+          transparent 85%
+        );
       }
 
       .glass {
@@ -50,9 +61,21 @@
 
       .hero-glow {
         background:
-          radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.22), transparent 28%),
-          radial-gradient(circle at 80% 18%, rgba(59, 130, 246, 0.22), transparent 26%),
-          radial-gradient(circle at 55% 80%, rgba(168, 85, 247, 0.18), transparent 32%);
+          radial-gradient(
+            circle at 15% 20%,
+            rgba(16, 185, 129, 0.22),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 80% 18%,
+            rgba(59, 130, 246, 0.22),
+            transparent 26%
+          ),
+          radial-gradient(
+            circle at 55% 80%,
+            rgba(168, 85, 247, 0.18),
+            transparent 32%
+          );
       }
 
       .card-border {
@@ -65,99 +88,198 @@
       <div class="hero-glow absolute inset-0"></div>
       <div class="grid-bg absolute inset-0 opacity-40"></div>
 
-      <header class="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
+      <header
+        class="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8"
+      >
         <a href="#top" class="flex items-center gap-3">
-          <div class="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/10 shadow-2xl shadow-emerald-500/10">
-            <span class="text-lg font-semibold tracking-wide">M</span>
+          <div
+            class="flex h-11 w-11 items-center justify-center bg-white/10 shadow-2xl shadow-emerald-500/10"
+          >
+            <img src="./icon512.png" alt="icon" sizes="44px" />
           </div>
           <div>
-            <p class="text-sm uppercase tracking-[0.28em] text-white/50">MTR Scripting Tools</p>
+            <p class="text-sm uppercase tracking-[0.28em] text-white/50">
+              MTR Scripting Tools
+            </p>
             <p class="text-sm text-white/65">VS Code Extension</p>
           </div>
         </a>
 
         <nav class="hidden items-center gap-3 md:flex">
-          <a href="#features" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5 hover:text-white">Features</a>
-          <a href="#workflow" class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5 hover:text-white">Workflow</a>
-          <a href="https://github.com/xiangao0904/mtr-scripting-tools" target="_blank" rel="noreferrer" class="rounded-full bg-white px-4 py-2 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]">GitHub</a>
+          <a
+            href="#features"
+            class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5 hover:text-white"
+            >Features</a
+          >
+          <a
+            href="#workflow"
+            class="rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-white/30 hover:bg-white/5 hover:text-white"
+            >Get Start</a
+          >
+
+          <a
+            href="https://github.com/xiangao0904/mtr-scripting-tools"
+            target="_blank"
+            rel="noreferrer"
+            class="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-neutral-950 transition all duration-300 hover:bg-neutral-100 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:scale-[1.05]"
+          >
+            <img
+              src="git.png"
+              alt=""
+              class="h-4 w-4 transition-transform group-hover:rotate-12"
+            />
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=huliawsl.mtr-scripting-tools"
+            target="_blank"
+            rel="noreferrer"
+            class="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-neutral-950 transition all duration-300 hover:bg-neutral-100 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:scale-[1.05]"
+          >
+            <img
+              src="ms.png"
+              alt=""
+              class="h-4 w-4 transition-transform group-hover:scale-110"
+            />
+            <span>Marketplace</span>
+          </a>
         </nav>
       </header>
 
       <main id="top" class="relative z-10">
-        <section class="mx-auto grid max-w-7xl gap-16 px-6 pb-24 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:pb-32 lg:pt-16">
+        <section
+          class="mx-auto grid max-w-7xl gap-16 px-6 pb-24 pt-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8 lg:pb-32 lg:pt-16"
+        >
           <div>
-            <div class="mb-6 inline-flex items-center rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-emerald-200">
+            <div
+              class="mb-6 inline-flex items-center rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs uppercase tracking-[0.3em] text-emerald-200"
+            >
               Precision tooling for MTR developers
             </div>
 
-            <h1 class="max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-7xl">
-              Build Minecraft Transit Railway scripts with a cleaner, smarter workflow.
+            <h1
+              class="max-w-4xl text-5xl font-semibold leading-tight tracking-tight text-white md:text-7xl"
+            >
+              Speed up your MTR scripting <br class="hidden md:block" />
+              with
+              <span class="text-emerald-300">intelligent completions</span>.
             </h1>
 
-            <p class="mt-6 max-w-2xl text-lg leading-8 text-white/70 md:text-xl">
-              MTR Scripting Tools is a modern Visual Studio Code extension that brings intelligent API assistance and asset-aware autocomplete to JavaScript-based MTR development.
+            <p
+              class="mt-6 max-w-2xl text-lg leading-8 text-white/70 md:text-xl"
+            >
+              MTR Scripting Tools is a modern Visual Studio Code extension that
+              brings intelligent API assistance and asset-aware autocomplete to
+              JavaScript-based MTR development.
             </p>
 
             <div class="mt-10 flex flex-wrap items-center gap-4">
-              <a href="https://github.com/xiangao0904/mtr-scripting-tools" target="_blank" rel="noreferrer" class="rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]">
-                View Repository
+              <a
+                href="vscode:extension/huliawsl.mtr-scripting-tools"
+                target="_blank"
+                rel="noreferrer"
+                class="group flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition all duration-300 hover:scale-[1.05] hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]"
+              >
+                <img
+                  src="vsc.png"
+                  alt="VS Code"
+                  class="h-5 w-5 transition-transform duration-300 group-hover:rotate-[-12deg] group-hover:scale-110"
+                />
+                <span>Install in VSCode</span>
               </a>
-              <a href="#workflow" class="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white/80 transition hover:border-white/30 hover:bg-white/5 hover:text-white">
-                See Workflow
+
+              <a
+                href="#workflow"
+                class="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white/80 transition hover:border-white/30 hover:bg-white/5 hover:text-white"
+              >
+                How to Get Start
               </a>
             </div>
 
             <div class="mt-12 grid gap-4 sm:grid-cols-2">
               <div class="glass rounded-2xl px-5 py-4 card-border">
-                <p class="text-sm text-white/80">Visual Studio Code extension for MTR scripting</p>
+                <p class="text-sm text-white/80">
+                  Visual Studio Code extension for MTR scripting
+                </p>
               </div>
               <div class="glass rounded-2xl px-5 py-4 card-border">
-                <p class="text-sm text-white/80">JavaScript-based MTR API assistance</p>
+                <p class="text-sm text-white/80">
+                  JavaScript-based MTR API assistance
+                </p>
               </div>
               <div class="glass rounded-2xl px-5 py-4 card-border">
-                <p class="text-sm text-white/80">Resource-aware development workflow</p>
+                <p class="text-sm text-white/80">
+                  Resource-aware development workflow
+                </p>
               </div>
               <div class="glass rounded-2xl px-5 py-4 card-border">
-                <p class="text-sm text-white/80">Fast setup for local development and testing</p>
+                <p class="text-sm text-white/80">
+                  Fast setup for local development and testing
+                </p>
               </div>
             </div>
           </div>
 
           <div class="relative">
-            <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-emerald-400/20 via-cyan-400/10 to-violet-500/20 blur-3xl"></div>
-            <div class="glass relative rounded-[2rem] p-4 shadow-2xl shadow-black/40 card-border">
-              <div class="rounded-[1.5rem] border border-white/10 bg-[#0a1020]/95 p-6">
+            <div
+              class="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-emerald-400/20 via-cyan-400/10 to-violet-500/20 blur-3xl"
+            ></div>
+            <div
+              class="glass relative rounded-[2rem] p-4 shadow-2xl shadow-black/40 card-border"
+            >
+              <div
+                class="rounded-[1.5rem] border border-white/10 bg-[#0a1020]/95 p-6"
+              >
                 <div class="mb-5 flex items-center gap-2">
                   <div class="h-3 w-3 rounded-full bg-white/20"></div>
                   <div class="h-3 w-3 rounded-full bg-white/10"></div>
                   <div class="h-3 w-3 rounded-full bg-white/10"></div>
                 </div>
                 <div class="space-y-4 font-mono text-sm text-white/80">
-                  <div class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-emerald-100">
+                  <div
+                    class="rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-emerald-100"
+                  >
                     API definitions loaded successfully
                   </div>
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                    <span class="text-white/40">script.</span>
-                    <span class="text-cyan-300">createPlatform</span>
+                  <div
+                    class="rounded-2xl border border-white/10 bg-white/5 p-4"
+                  >
+                    <span class="text-white/40">ModelManager.</span>
+                    <span class="text-cyan-300">upload</span>
                     <span class="text-white/50">(</span>
-                    <span class="text-amber-200">stationId</span>
+                    <span class="text-amber-200">RawModel</span>
                     <span class="text-white/50">)</span>
                   </div>
-                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div
+                    class="rounded-2xl border border-white/10 bg-white/5 p-4"
+                  >
                     <span class="text-white/40">assets/</span>
-                    <span class="text-violet-300">textures</span>
+                    <span class="text-violet-300">mtr</span>
                     <span class="text-white/50">/</span>
-                    <span class="text-violet-300">signals</span>
+                    <span class="text-violet-300">metro</span>
                     <span class="text-white/50">/</span>
-                    <span class="text-white">indicator.png</span>
+                    <span class="text-white">train.bbmodel</span>
                   </div>
                   <div class="grid grid-cols-2 gap-4">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <p class="text-xs uppercase tracking-[0.24em] text-white/40">Focus</p>
+                    <div
+                      class="rounded-2xl border border-white/10 bg-white/5 p-4"
+                    >
+                      <p
+                        class="text-xs uppercase tracking-[0.24em] text-white/40"
+                      >
+                        Focus
+                      </p>
                       <p class="mt-2 text-lg text-white">Code clarity</p>
                     </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                      <p class="text-xs uppercase tracking-[0.24em] text-white/40">Output</p>
+                    <div
+                      class="rounded-2xl border border-white/10 bg-white/5 p-4"
+                    >
+                      <p
+                        class="text-xs uppercase tracking-[0.24em] text-white/40"
+                      >
+                        Output
+                      </p>
                       <p class="mt-2 text-lg text-white">Faster iteration</p>
                     </div>
                   </div>
@@ -169,37 +291,65 @@
 
         <section id="features" class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
           <div class="max-w-2xl">
-            <p class="text-sm uppercase tracking-[0.28em] text-white/40">Features</p>
-            <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+            <p class="text-sm uppercase tracking-[0.28em] text-white/40">
+              Features
+            </p>
+            <h2
+              class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl"
+            >
               Purpose-built tooling for an MTR scripting workflow.
             </h2>
             <p class="mt-5 text-lg leading-8 text-white/65">
-              Instead of treating MTR scripting like a generic JavaScript project, this extension brings targeted support for the way MTR creators actually build.
+              Instead of treating MTR scripting like a generic JavaScript
+              project, this extension brings targeted support for the way MTR
+              creators actually build.
             </p>
           </div>
 
           <div class="mt-14 grid gap-6 lg:grid-cols-3">
-            <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
-              <div class="mb-6 h-12 w-12 rounded-2xl border border-white/10 bg-white/5"></div>
-              <h3 class="text-xl font-medium text-white">Dynamic IntelliSense</h3>
+            <article
+              class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              <div
+                class="mb-6 h-12 w-12 rounded-2xl border border-white/10 bg-white/5"
+              ></div>
+              <h3 class="text-xl font-medium text-white">
+                Dynamic IntelliSense
+              </h3>
               <p class="mt-4 leading-7 text-white/65">
-                Load MTR scripting APIs into your workflow with context-aware code completion that keeps you moving fast inside VS Code.
+                Load MTR scripting APIs into your workflow with context-aware
+                code completion that keeps you moving fast inside VS Code.
               </p>
             </article>
 
-            <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
-              <div class="mb-6 h-12 w-12 rounded-2xl border border-white/10 bg-white/5"></div>
-              <h3 class="text-xl font-medium text-white">Asset Path Autocomplete</h3>
+            <article
+              class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              <div
+                class="mb-6 h-12 w-12 rounded-2xl border border-white/10 bg-white/5"
+              ></div>
+              <h3 class="text-xl font-medium text-white">
+                Asset Path Autocomplete
+              </h3>
               <p class="mt-4 leading-7 text-white/65">
-                Resolve textures, models, sounds, and JSON resources from your project directory with less friction and fewer path mistakes.
+                Resolve textures, models, sounds, and JSON resources from your
+                project directory with less friction and fewer path mistakes.
               </p>
             </article>
 
-            <article class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
-              <div class="mb-6 h-12 w-12 rounded-2xl border border-white/10 bg-white/5"></div>
-              <h3 class="text-xl font-medium text-white">Built for MTR Creators</h3>
+            <article
+              class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]"
+            >
+              <div
+                class="mb-6 h-12 w-12 rounded-2xl border border-white/10 bg-white/5"
+              ></div>
+              <h3 class="text-xl font-medium text-white">
+                Built for MTR Creators
+              </h3>
               <p class="mt-4 leading-7 text-white/65">
-                Designed specifically for Minecraft Transit Railway scripting workflows, with a focused developer experience instead of generic tooling.
+                Designed specifically for Minecraft Transit Railway scripting
+                workflows, with a focused developer experience instead of
+                generic tooling.
               </p>
             </article>
           </div>
@@ -209,46 +359,78 @@
           <div class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
             <div class="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
               <div>
-                <p class="text-sm uppercase tracking-[0.28em] text-white/40">Workflow</p>
-                <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl">
+                <p class="text-sm uppercase tracking-[0.28em] text-white/40">
+                  Get Start
+                </p>
+                <h2
+                  class="mt-4 text-3xl font-semibold tracking-tight text-white md:text-5xl"
+                >
                   From setup to scripting, the path stays streamlined.
                 </h2>
                 <p class="mt-5 max-w-xl text-lg leading-8 text-white/65">
-                  The goal is simple: reduce lookup time, reduce path errors, and keep development inside a fast feedback loop.
+                  The goal is simple: reduce lookup time, reduce path errors,
+                  and keep development inside a fast feedback loop.
                 </p>
               </div>
               <div class="space-y-5">
-                <div class="rounded-[1.75rem] border border-white/10 bg-[#0a1020]/80 p-6 backdrop-blur-sm">
+                <div
+                  class="rounded-[1.75rem] border border-white/10 bg-[#0a1020]/80 p-6 backdrop-blur-sm"
+                >
                   <div class="flex items-start gap-5">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm tracking-[0.2em] text-white/55">01</div>
+                    <div
+                      class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm tracking-[0.2em] text-white/55"
+                    >
+                      01
+                    </div>
                     <div>
-                      <h3 class="text-xl font-medium text-white">Install the extension</h3>
+                      <h3 class="text-xl font-medium text-white">
+                        Install the extension
+                      </h3>
                       <p class="mt-3 leading-7 text-white/65">
-                        Add MTR Scripting Tools to your VS Code environment and start working with a tailored scripting experience.
+                        Add MTR Scripting Tools to your VS Code environment and
+                        start working with a tailored scripting experience.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="rounded-[1.75rem] border border-white/10 bg-[#0a1020]/80 p-6 backdrop-blur-sm">
+                <div
+                  class="rounded-[1.75rem] border border-white/10 bg-[#0a1020]/80 p-6 backdrop-blur-sm"
+                >
                   <div class="flex items-start gap-5">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm tracking-[0.2em] text-white/55">02</div>
+                    <div
+                      class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm tracking-[0.2em] text-white/55"
+                    >
+                      02
+                    </div>
                     <div>
-                      <h3 class="text-xl font-medium text-white">Open your MTR project</h3>
+                      <h3 class="text-xl font-medium text-white">
+                        Open your MTR Add-on Pack
+                      </h3>
                       <p class="mt-3 leading-7 text-white/65">
-                        The extension detects project resources and prepares intelligent suggestions for code and asset references.
+                        The extension detects project resources and prepares
+                        intelligent suggestions for code and asset references.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div class="rounded-[1.75rem] border border-white/10 bg-[#0a1020]/80 p-6 backdrop-blur-sm">
+                <div
+                  class="rounded-[1.75rem] border border-white/10 bg-[#0a1020]/80 p-6 backdrop-blur-sm"
+                >
                   <div class="flex items-start gap-5">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm tracking-[0.2em] text-white/55">03</div>
+                    <div
+                      class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm tracking-[0.2em] text-white/55"
+                    >
+                      03
+                    </div>
                     <div>
-                      <h3 class="text-xl font-medium text-white">Build faster with confidence</h3>
+                      <h3 class="text-xl font-medium text-white">
+                        Build faster with confidence
+                      </h3>
                       <p class="mt-3 leading-7 text-white/65">
-                        Write scripts, navigate APIs, and reference assets with less manual lookup and fewer interruptions.
+                        Write scripts, navigate APIs, and reference assets with
+                        less manual lookup and fewer interruptions.
                       </p>
                     </div>
                   </div>
@@ -259,20 +441,54 @@
         </section>
 
         <section class="mx-auto max-w-7xl px-6 py-24 lg:px-8">
-          <div class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/[0.03] p-8 md:p-12">
+          <div
+            class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/8 to-white/[0.03] p-8 md:p-12"
+          >
             <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
               <div>
-                <p class="text-sm uppercase tracking-[0.28em] text-white/40">For developers</p>
-                <h2 class="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-5xl">
-                  Make MTR scripting feel like a polished product workflow, not a patchwork setup.
+                <p class="text-sm uppercase tracking-[0.28em] text-white/40">
+                  For developers
+                </p>
+                <h2
+                  class="mt-4 max-w-3xl text-3xl font-semibold tracking-tight text-white md:text-5xl"
+                >
+                  Bring modern developer standards to your MTR scripting.
                 </h2>
                 <p class="mt-5 max-w-2xl text-lg leading-8 text-white/65">
-                  Built for creators who want better ergonomics, clearer structure, and a more premium development experience inside Visual Studio Code.
+                  Elevate your VS Code setup with intelligent completions and a
+                  cleaner, more intuitive development experience.
                 </p>
               </div>
-              <a href="https://github.com/xiangao0904/mtr-scripting-tools" target="_blank" rel="noreferrer" class="inline-flex rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]">
-                Open on GitHub
-              </a>
+
+              <div class="flex flex-col gap-3 min-w-[240px]">
+                <a
+                  href="https://marketplace.visualstudio.com/items?itemName=huliawsl.mtr-scripting-tools"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]"
+                >
+                  <img
+                    src="ms.png"
+                    alt="MS Logo"
+                    class="h-5 w-5 object-contain"
+                  />
+                  Open on Marketplace
+                </a>
+
+                <a
+                  href="https://github.com/xiangao0904/mtr-scripting-tools"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-neutral-950 transition hover:scale-[1.02]"
+                >
+                  <img
+                    src="git.png"
+                    alt="GitHub Logo"
+                    class="h-5 w-5 object-contain"
+                  />
+                  View Source
+                </a>
+              </div>
             </div>
           </div>
         </section>
