@@ -4,10 +4,12 @@
   "description": "VSCode tools for Minecraft MTR Mod scripting",
   "version": "0.0.1",
   "icon": "icon.png",
+  "publisher": "Huli-awsl",
   "engines": {
     "vscode": "^1.116.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
   "activationEvents": [
