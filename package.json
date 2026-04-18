@@ -3,6 +3,10 @@
   "displayName": "MTR Scripting Tools",
   "description": "VSCode tools for Minecraft MTR Mod scripting",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiangao0904/mtr-scripting-tools"
+  },
   "icon": "icon.png",
   "publisher": "Huli-awsl",
   "engines": {
