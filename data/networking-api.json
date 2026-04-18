@@ -1,0 +1,62 @@
+[
+{
+"label": "Networking",
+"kind": "Class",
+"detail": "Static Networking API",
+"documentation": "Provides methods for fetching data from external URLs via HTTP requests."
+},
+{
+"label": "fetch",
+"kind": "Method",
+"detail": "Networking.fetch(url: String): NetworkResponse",
+"documentation": "Fetch data from the corresponding URL. Returns a NetworkResponse wrapping a DataReader."
+},
+{
+"label": "fetch",
+"kind": "Method",
+"detail": "Networking.fetch(url: String, requestOption: RequestOption): NetworkResponse",
+"documentation": "Fetch data from the corresponding URL with custom Request Options (method, timeout, headers, body). Returns a NetworkResponse wrapping a DataReader."
+},
+{
+"label": "NetworkResponse",
+"kind": "Class",
+"detail": "HTTP Network Response",
+"documentation": "A wrapper for the data and metadata returned from a Networking.fetch call."
+},
+{
+"label": "getResponseCode",
+"kind": "Method",
+"detail": "NetworkResponse.getResponseCode(): int",
+"documentation": "Get the HTTP Response Code (e.g., 200 for OK, 404 for Not Found)."
+},
+{
+"label": "success",
+"kind": "Method",
+"detail": "NetworkResponse.success(): boolean",
+"documentation": "Returns whether a response was received from the server. Note: Use .ok() to check if the status code is in the 200-299 range."
+},
+{
+"label": "ok",
+"kind": "Method",
+"detail": "NetworkResponse.ok(): boolean",
+"documentation": "Returns true if the response code is within the 200-299 range."
+},
+{
+"label": "getData",
+"kind": "Method",
+"detail": "NetworkResponse.getData(): DataReader",
+"documentation": "Obtain the fetched data as a DataReader. Returns null if the request failed."
+},
+{
+"label": "exception",
+"kind": "Method",
+"detail": "NetworkResponse.exception(): Exception",
+"documentation": "Returns the relevant Java Exception if the request failed, or null if it succeeded."
+},
+{
+"label": "getHeaders",
+"kind": "Method",
+"detail": "NetworkResponse.getHeaders(): Map<String, List<String>>",
+"documentation": "Obtain the headers returned in the HTTP response. Returns null if the request failed."
+}
+]

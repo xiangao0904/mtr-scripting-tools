@@ -1,0 +1,218 @@
+[
+  {
+    "label": "Vector3f",
+    "kind": "Class",
+    "detail": "3D Vector Class",
+    "documentation": "A class representing a 3D vector with floating-point coordinates used for spatial calculations."
+  },
+  {
+    "label": "Vector3f",
+    "kind": "Constructor",
+    "detail": "new Vector3f(x: float, y: float, z: float): Vector3f",
+    "documentation": "Creates an instance of the Vector3f class with specified x, y, and z coordinates."
+  },
+  {
+    "label": "Vector3f",
+    "kind": "Constructor",
+    "detail": "new Vector3f(tscVec: Vector): Vector3f",
+    "documentation": "Creates an instance of the Vector3f class from the Vector class from MTR's Transport Simulation Core."
+  },
+  {
+    "label": "x",
+    "kind": "Method",
+    "detail": "Vector3f.x(): float",
+    "documentation": "Returns the X coordinate of the vector."
+  },
+  {
+    "label": "y",
+    "kind": "Method",
+    "detail": "Vector3f.y(): float",
+    "documentation": "Returns the Y coordinate of the vector."
+  },
+  {
+    "label": "z",
+    "kind": "Method",
+    "detail": "Vector3f.z(): float",
+    "documentation": "Returns the Z coordinate of the vector."
+  },
+  {
+    "label": "copy",
+    "kind": "Method",
+    "detail": "Vector3f.copy(): Vector3f",
+    "documentation": "Returns a copy of the vector that can be independently modified."
+  },
+  {
+    "label": "normalize",
+    "kind": "Method",
+    "detail": "Vector3f.normalize(): Vector3f",
+    "documentation": "Normalizes the vector to a unit vector (length of 1) while preserving its direction."
+  },
+  {
+    "label": "add",
+    "kind": "Method",
+    "detail": "Vector3f.add(x: float, y: float, z: float): Vector3f",
+    "documentation": "Adds the given x, y, z coordinates to the current vector."
+  },
+  {
+    "label": "add",
+    "kind": "Method",
+    "detail": "Vector3f.add(other: Vector3f): Vector3f",
+    "documentation": "Adds the coordinates of another Vector3f to the current vector."
+  },
+  {
+    "label": "sub",
+    "kind": "Method",
+    "detail": "Vector3f.sub(other: Vector3f): Vector3f",
+    "documentation": "Subtracts the given vector from another Vector3f."
+  },
+  {
+    "label": "mul",
+    "kind": "Method",
+    "detail": "Vector3f.mul(x: float, y: float, z: float): Vector3f",
+    "documentation": "Multiplies each coordinate by the specified numbers respectively."
+  },
+  {
+    "label": "mul",
+    "kind": "Method",
+    "detail": "Vector3f.mul(n: float): Vector3f",
+    "documentation": "Multiplies each coordinate by the specified number."
+  },
+  {
+    "label": "rotX",
+    "kind": "Method",
+    "detail": "Vector3f.rotX(rad: float): Vector3f",
+    "documentation": "Rotates the vector along the X axis by the specified angle in radians."
+  },
+  {
+    "label": "rotY",
+    "kind": "Method",
+    "detail": "Vector3f.rotY(rad: float): Vector3f",
+    "documentation": "Rotates the vector along the Y axis by the specified angle in radians."
+  },
+  {
+    "label": "rotZ",
+    "kind": "Method",
+    "detail": "Vector3f.rotZ(rad: float): Vector3f",
+    "documentation": "Rotates the vector along the Z axis by the specified angle in radians."
+  },
+  {
+    "label": "cross",
+    "kind": "Method",
+    "detail": "Vector3f.cross(other: Vector3f): Vector3f",
+    "documentation": "Performs a vector product with another vector. The result is perpendicular to both vectors."
+  },
+  {
+    "label": "distance",
+    "kind": "Method",
+    "detail": "Vector3f.distance(other: Vector3f): float",
+    "documentation": "Returns the distance to the coordinates represented by the other vector."
+  },
+  {
+    "label": "distanceSq",
+    "kind": "Method",
+    "detail": "Vector3f.distanceSq(other: Vector3f): float",
+    "documentation": "Returns the square of the distance to the other vector (faster than .distance())."
+  },
+  {
+    "label": "rawBlockPos",
+    "kind": "Method",
+    "detail": "Vector3f.rawBlockPos(): BlockPos",
+    "documentation": "Returns a Minecraft BlockPos with rounded vector values."
+  },
+  {
+    "label": "ZERO",
+    "kind": "Property",
+    "detail": "Vector3f.ZERO: Vector3f",
+    "documentation": "Static zero vector (0, 0, 0). Do not operate/manipulate this object."
+  },
+  {
+    "label": "XP",
+    "kind": "Property",
+    "detail": "Vector3f.XP: Vector3f",
+    "documentation": "Static vector with value (1, 0, 0). Do not operate/manipulate this object."
+  },
+  {
+    "label": "YP",
+    "kind": "Property",
+    "detail": "Vector3f.YP: Vector3f",
+    "documentation": "Static vector with value (0, 1, 0). Do not operate/manipulate this object."
+  },
+  {
+    "label": "ZP",
+    "kind": "Property",
+    "detail": "Vector3f.ZP: Vector3f",
+    "documentation": "Static vector with value (0, 0, 1). Do not operate/manipulate this object."
+  },
+  {
+    "label": "Matrices",
+    "kind": "Class",
+    "detail": "Transformation Matrices Stack",
+    "documentation": "Manages a stack of transformation matrices to apply translations and rotations to rendered objects."
+  },
+  {
+    "label": "Matrices",
+    "kind": "Constructor",
+    "detail": "new Matrices(): Matrices",
+    "documentation": "Returns a new Matrices instance, initially containing one unit matrix."
+  },
+  {
+    "label": "translate",
+    "kind": "Method",
+    "detail": "Matrices.translate(x: float, y: float, z: float): void",
+    "documentation": "Adds a translation transformation (x, y, z) to the current matrix state."
+  },
+  {
+    "label": "rotateX",
+    "kind": "Method",
+    "detail": "Matrices.rotateX(xRad: float): void",
+    "documentation": "Rotates the matrix along the X axis in radians."
+  },
+  {
+    "label": "rotateY",
+    "kind": "Method",
+    "detail": "Matrices.rotateY(yRad: float): void",
+    "documentation": "Rotates the matrix along the Y axis in radians."
+  },
+  {
+    "label": "rotateZ",
+    "kind": "Method",
+    "detail": "Matrices.rotateZ(zRad: float): void",
+    "documentation": "Rotates the matrix along the Z axis in radians."
+  },
+  {
+    "label": "rotateXDegrees",
+    "kind": "Method",
+    "detail": "Matrices.rotateXDegrees(xDeg: float): void",
+    "documentation": "Rotates the matrix along the X axis in degrees."
+  },
+  {
+    "label": "rotateYDegrees",
+    "kind": "Method",
+    "detail": "Matrices.rotateYDegrees(yDeg: float): void",
+    "documentation": "Rotates the matrix along the Y axis in degrees."
+  },
+  {
+    "label": "rotateZDegrees",
+    "kind": "Method",
+    "detail": "Matrices.rotateZDegrees(zDeg: float): void",
+    "documentation": "Rotates the matrix along the Z axis in degrees."
+  },
+  {
+    "label": "pushPose",
+    "kind": "Method",
+    "detail": "Matrices.pushPose(): void",
+    "documentation": "Saves a copy of the current state onto the stack."
+  },
+  {
+    "label": "popPose",
+    "kind": "Method",
+    "detail": "Matrices.popPose(): void",
+    "documentation": "Resets the current state and restores the last saved state from the stack."
+  },
+  {
+    "label": "popPushPose",
+    "kind": "Method",
+    "detail": "Matrices.popPushPose(): void",
+    "documentation": "Shortcut that deletes the current state and then saves a copy of the restored state."
+  }
+]

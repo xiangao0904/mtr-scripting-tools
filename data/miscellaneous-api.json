@@ -1,0 +1,236 @@
+[
+  {
+    "label": "getAddonVersion",
+    "kind": "Method",
+    "detail": "Resources.getAddonVersion(modId: String): String",
+    "documentation": "Obtain the version of a mod that is hooked to the scripting functionality. Supported modId values: 'mtr', 'jcm', 'mtrscripting'."
+  },
+  {
+    "label": "TextUtil",
+    "kind": "Class",
+    "detail": "Text Processing Utility",
+    "documentation": "Utility class for CJK (Chinese, Japanese, Korean) text detection and string manipulation."
+  },
+  {
+    "label": "getCjkParts",
+    "kind": "Method",
+    "detail": "TextUtil.getCjkParts(src: String): String",
+    "documentation": "Returns the CJK parts of the passed string."
+  },
+  {
+    "label": "getNonCjkParts",
+    "kind": "Method",
+    "detail": "TextUtil.getNonCjkParts(src: String): String",
+    "documentation": "Returns the non-CJK parts of the passed string."
+  },
+  {
+    "label": "getExtraParts",
+    "kind": "Method",
+    "detail": "TextUtil.getExtraParts(src: String): String",
+    "documentation": "Returns the extra part of the passed string."
+  },
+  {
+    "label": "getNonExtraParts",
+    "kind": "Method",
+    "detail": "TextUtil.getNonExtraParts(src: String): String",
+    "documentation": "Returns everything except the extra part."
+  },
+  {
+    "label": "getNonCjkAndExtraParts",
+    "kind": "Method",
+    "detail": "TextUtil.getNonCjkAndExtraParts(src: String): String",
+    "documentation": "Returns everything except the CJK parts."
+  },
+  {
+    "label": "isCjk",
+    "kind": "Method",
+    "detail": "TextUtil.isCjk(src: String): boolean",
+    "documentation": "Checks whether the string contains CJK characters."
+  },
+  {
+    "label": "cycleString",
+    "kind": "Method",
+    "detail": "TextUtil.cycleString(src: String): String",
+    "documentation": "Returns a text that automatically cycles between different languages, delimited by the pipe '|' character."
+  },
+  {
+    "label": "cycleString",
+    "kind": "Method",
+    "detail": "TextUtil.cycleString(src: String, duration: int): String",
+    "documentation": "Returns a text that cycles between languages with a specified duration in Minecraft Ticks."
+  },
+  {
+    "label": "Timing",
+    "kind": "Class",
+    "detail": "Game Timing Utility",
+    "documentation": "Utility class for accessing game time, delta time, and system time."
+  },
+  {
+    "label": "elapsed",
+    "kind": "Method",
+    "detail": "Timing.elapsed(): double",
+    "documentation": "Returns the running time of the game in seconds. Constantly increases even when paused."
+  },
+  {
+    "label": "delta",
+    "kind": "Method",
+    "detail": "Timing.delta(): double",
+    "documentation": "The time difference between the current render call and the previous one. Useful for smooth animation calculations."
+  },
+  {
+    "label": "currentTimeMillis",
+    "kind": "Method",
+    "detail": "Timing.currentTimeMillis(): long",
+    "documentation": "Returns the current system time in milliseconds (Unix epoch)."
+  },
+  {
+    "label": "nanoTime",
+    "kind": "Method",
+    "detail": "Timing.nanoTime(): long",
+    "documentation": "Returns the current system time in nanoseconds, equivalent to Java's System.nanoTime()."
+  },
+  {
+    "label": "StateTracker",
+    "kind": "Class",
+    "detail": "State Monitoring Utility",
+    "documentation": "Class used to track changes in states over time."
+  },
+  {
+    "label": "StateTracker",
+    "kind": "Constructor",
+    "detail": "new StateTracker(): StateTracker",
+    "documentation": "Create a new instance of StateTracker."
+  },
+  {
+    "label": "setState",
+    "kind": "Method",
+    "detail": "StateTracker.setState(value: object?): void",
+    "documentation": "Sets the new state for tracking."
+  },
+  {
+    "label": "stateNow",
+    "kind": "Method",
+    "detail": "StateTracker.stateNow(): object?",
+    "documentation": "Returns the current state."
+  },
+  {
+    "label": "stateLast",
+    "kind": "Method",
+    "detail": "StateTracker.stateLast(): object?",
+    "documentation": "Returns the previous state. Null if it does not exist."
+  },
+  {
+    "label": "stateNowDuration",
+    "kind": "Method",
+    "detail": "StateTracker.stateNowDuration(): double",
+    "documentation": "Returns the duration in seconds that the current state has lasted."
+  },
+  {
+    "label": "stateNowFirst",
+    "kind": "Method",
+    "detail": "StateTracker.stateNowFirst(): boolean",
+    "documentation": "Checks if the state was just changed in this loop."
+  },
+  {
+    "label": "changedTo",
+    "kind": "Method",
+    "detail": "StateTracker.changedTo(value: object?): boolean",
+    "documentation": "Returns true if the state just changed to the specified value."
+  },
+  {
+    "label": "changedFromTo",
+    "kind": "Method",
+    "detail": "StateTracker.changedFromTo(oldValue: object?, value: object?): boolean",
+    "documentation": "Returns true if the state just changed from oldValue to value."
+  },
+  {
+    "label": "CycleTracker",
+    "kind": "Class",
+    "detail": "Time-based State Cycler",
+    "documentation": "Automatically switches through a list of states based on specified durations."
+  },
+  {
+    "label": "CycleTracker",
+    "kind": "Constructor",
+    "detail": "new CycleTracker(params: Object[]): CycleTracker",
+    "documentation": "Create a CycleTracker. Example: `new CycleTracker(['route', 5, 'nextStation', 5])` switches states every 5 seconds."
+  },
+  {
+    "label": "tick",
+    "kind": "Method",
+    "detail": "CycleTracker.tick(): void",
+    "documentation": "Updates the CycleTracker status based on the current time."
+  },
+  {
+    "label": "stateNow",
+    "kind": "Method",
+    "detail": "CycleTracker.stateNow(): String",
+    "documentation": "Returns the current state in the cycle."
+  },
+  {
+    "label": "RateLimit",
+    "kind": "Class",
+    "detail": "Execution Frequency Limiter",
+    "documentation": "Utility to control how often a block of code is executed."
+  },
+  {
+    "label": "RateLimit",
+    "kind": "Constructor",
+    "detail": "new RateLimit(interval: double): RateLimit",
+    "documentation": "Create a new RateLimit with a specific interval in seconds (e.g., 0.1 for 10 times per second)."
+  },
+  {
+    "label": "shouldUpdate",
+    "kind": "Method",
+    "detail": "RateLimit.shouldUpdate(): boolean",
+    "documentation": "Returns true if enough time has elapsed to trigger the update again."
+  },
+  {
+    "label": "resetCoolDown",
+    "kind": "Method",
+    "detail": "RateLimit.resetCoolDown(): void",
+    "documentation": "Resets the timer so the next trigger occurs as soon as possible."
+  },
+  {
+    "label": "DataReader",
+    "kind": "Class",
+    "detail": "Resource Data Reader",
+    "documentation": "A handle for reading the content of a resource file in various formats (text, image, font, or raw bytes)."
+  },
+  {
+    "label": "asString",
+    "kind": "Method",
+    "detail": "DataReader.asString(): String?",
+    "documentation": "Return the file's content as plain text in UTF-8 encoding. Returns null if decoding fails."
+  },
+  {
+    "label": "asBufferedImage",
+    "kind": "Method",
+    "detail": "DataReader.asBufferedImage(): BufferedImage?",
+    "documentation": "Return the file's content as a BufferedImage. Returns null if decoding fails."
+  },
+  {
+    "label": "asFont",
+    "kind": "Method",
+    "detail": "DataReader.asFont(): Font?",
+    "documentation": "Load a custom TTF or OTF font file as an AWT Font. \n\n**Note:** This generates temporary files starting with `+~JF` in your system temp directory. Delete these or restart to free disk space."
+  },
+  {
+    "label": "asByteArray",
+    "kind": "Method",
+    "detail": "DataReader.asByteArray(): byte[]",
+    "documentation": "Return the file's content as a raw byte array."
+  },
+  {
+    "label": "openInputStream",
+    "kind": "Method",
+    "detail": "DataReader.openInputStream(callback: Consumer<InputStream>): void",
+    "documentation": "Opens the underlying InputStream and passes it to a callback function. The stream is automatically closed after execution."
+  },
+  {
+    "label": "asInputStream",
+    "kind": "Method",
+    "detail": "DataReader.asInputStream(): InputStream",
+    "documentation": "Return the underlying InputStream. \n\n**Note:** You must manually close the stream after use using `.close()`."
+  }
+]

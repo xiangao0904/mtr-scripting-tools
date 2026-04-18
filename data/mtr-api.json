@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Resources",
+    "kind": "Class",
+    "detail": "MTR 全局资源类",
+    "documentation": "用于加载贴图、模型等资产的全局类。"
+  },
+  {
+    "label": "loadTexture",
+    "kind": "Method",
+    "detail": "Resources.loadTexture(path: string)",
+    "documentation": "从资源包或 Mod 目录中加载一张贴图。",
+    "insertText": "loadTexture(\"${1:assets/joban/textures/...}\")"
+  },
+  {
+    "label": "getDeltaT",
+    "kind": "Function",
+    "detail": "Timing.getDeltaT()",
+    "documentation": "获取自上一帧以来经过的时间（秒）。",
+    "insertText": "getDeltaT()"
+  }
+]

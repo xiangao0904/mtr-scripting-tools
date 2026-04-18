@@ -1,0 +1,62 @@
+[
+  {
+    "label": "console",
+    "kind": "Class",
+    "detail": "Static Console API",
+    "documentation": "Provides methods for logging information, warnings, errors, and performance timing within the script environment."
+  },
+  {
+    "label": "log",
+    "kind": "Method",
+    "detail": "console.log(values: Object...): void",
+    "documentation": "Print out the values in the game console, separated by spaces."
+  },
+  {
+    "label": "warn",
+    "kind": "Method",
+    "detail": "console.warn(values: Object...): void",
+    "documentation": "Print out the values in the game console (In WARNING level), separated by spaces."
+  },
+  {
+    "label": "error",
+    "kind": "Method",
+    "detail": "console.error(values: Object...): void",
+    "documentation": "Print out the values in the game console (In ERROR level), separated by spaces."
+  },
+  {
+    "label": "debug",
+    "kind": "Method",
+    "detail": "console.debug(values: Object...): void",
+    "documentation": "Print out the values in debug mode (Only if JCM's Script Debug Mode is enabled), separated by spaces."
+  },
+  {
+    "label": "count",
+    "kind": "Method",
+    "detail": "console.count(label: String = \"default\"): void",
+    "documentation": "Increment 1 to a counter named as the label, as well as printing out the incremented counter value. Each label has a separate counter."
+  },
+  {
+    "label": "countReset",
+    "kind": "Method",
+    "detail": "console.countReset(label: String = \"default\"): void",
+    "documentation": "Set 0 to a counter named as the label, as well as printing out the counter value. Each label has a separate counter."
+  },
+  {
+    "label": "time",
+    "kind": "Method",
+    "detail": "console.time(label: String = \"default\"): void",
+    "documentation": "Start a timer named as the label. Each label has a separate timer."
+  },
+  {
+    "label": "timeLog",
+    "kind": "Method",
+    "detail": "console.timeLog(label: String = \"default\"): void",
+    "documentation": "Print out how many millisecond has elapsed since the timer is first started. Each label has a separate timer."
+  },
+  {
+    "label": "timeEnd",
+    "kind": "Method",
+    "detail": "console.timeEnd(label: String = \"default\"): void",
+    "documentation": "Reset a timer named as the label, as well as printing out how many millisecond has elapsed since the timer is first started. Each label has a separate timer."
+  }
+]

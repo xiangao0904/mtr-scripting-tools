@@ -1,0 +1,236 @@
+[
+  {
+    "label": "ModelManager",
+    "kind": "Class",
+    "detail": "Static Model Manager",
+    "documentation": "Provides static methods for loading and uploading 3D models."
+  },
+  {
+    "label": "loadModel",
+    "kind": "Method",
+    "detail": "ModelManager.loadModel(id: Identifier, flipV: boolean): RawModel",
+    "documentation": "Load a full OBJ model located in id. Returns a RawModel. If flipV is true, the texture's V axis will be mirrored (Required for OBJ exported from software like Blender)."
+  },
+  {
+    "label": "loadModelParts",
+    "kind": "Method",
+    "detail": "ModelManager.loadModelParts(id: Identifier, flipV: boolean): Map<String, RawModel>",
+    "documentation": "Load an OBJ model located in id. Returns a map of String & RawModel, each entry corresponding to an object group (or parts) in the OBJ file."
+  },
+  {
+    "label": "upload",
+    "kind": "Method",
+    "detail": "ModelManager.upload(rawModel: RawModel): Model",
+    "documentation": "Upload the model data to the GPU so it can be effectively rendered. Returns a Model. This should only be invoked during the Loading/Parsing stage."
+  },
+  {
+    "label": "loadRawModel",
+    "kind": "Method",
+    "detail": "ModelManager.loadRawModel(p1: null, id: Identifier, p2: null): RawModel",
+    "documentation": "Deprecated. Equivalent to ModelManager.loadModel with flipV set to false."
+  },
+  {
+    "label": "loadPartedRawModel",
+    "kind": "Method",
+    "detail": "ModelManager.loadPartedRawModel(p1: null, id: Identifier, p2: null): Map<String, RawModel>",
+    "documentation": "Deprecated. Equivalent to ModelManager.loadModelParts."
+  },
+  {
+    "label": "uploadVertArrays",
+    "kind": "Method",
+    "detail": "ModelManager.uploadVertArrays(rawModel: RawModel): Model",
+    "documentation": "Deprecated. Equivalent to ModelManager.upload."
+  },
+  {
+    "label": "RawModel",
+    "kind": "Class",
+    "detail": "Static Model Data",
+    "documentation": "Represents the static data of a model (vertices, UVs, groups). Must be uploaded via ModelManager.upload() to be rendered."
+  },
+  {
+    "label": "RawModel",
+    "kind": "Constructor",
+    "detail": "new RawModel(): RawModel",
+    "documentation": "Create a new empty RawModel."
+  },
+  {
+    "label": "append",
+    "kind": "Method",
+    "detail": "RawModel.append(other: RawMesh): RawModel",
+    "documentation": "Append/combine another RawMesh to the current RawModel."
+  },
+  {
+    "label": "append",
+    "kind": "Method",
+    "detail": "RawModel.append(other: RawModel): RawModel",
+    "documentation": "Append/combine another RawModel to the current RawModel."
+  },
+  {
+    "label": "applyTranslation",
+    "kind": "Method",
+    "detail": "RawModel.applyTranslation(x: float, y: float, z: float): void",
+    "documentation": "Translate all vertices in the model by x, y and z."
+  },
+  {
+    "label": "applyRotation",
+    "kind": "Method",
+    "detail": "RawModel.applyRotation(direction: Vector3f, angle: float): void",
+    "documentation": "Apply rotation to all vertices in a direction specified by a Vector3f. Angle is in degrees."
+  },
+  {
+    "label": "applyScale",
+    "kind": "Method",
+    "detail": "RawModel.applyScale(x: float, y: float, z: float): void",
+    "documentation": "Scale the model relative to the model's origin."
+  },
+  {
+    "label": "applyMirror",
+    "kind": "Method",
+    "detail": "RawModel.applyMirror(x: boolean, y: boolean, z: boolean): void",
+    "documentation": "Mirror the model for the respective axis which are set to true."
+  },
+  {
+    "label": "applyUVMirror",
+    "kind": "Method",
+    "detail": "RawModel.applyUVMirror(u: boolean, v: boolean): void",
+    "documentation": "Set whether the respective UV axis should be mirrored."
+  },
+  {
+    "label": "setAllRenderType",
+    "kind": "Method",
+    "detail": "RawModel.setAllRenderType(renderType: String): void",
+    "documentation": "Set the render type for all objects. Supported: EXTERIOR, INTERIOR, LIGHT, ALWAYS_ON_LIGHT, etc."
+  },
+  {
+    "label": "copy",
+    "kind": "Method",
+    "detail": "RawModel.copy(): RawModel",
+    "documentation": "Copy all vertices and material data and return a new instance of RawModel."
+  },
+  {
+    "label": "replaceTexture",
+    "kind": "Method",
+    "detail": "RawModel.replaceTexture(fileName: string, id: Identifier): void",
+    "documentation": "Replace all textures ending with fileName to the specified Identifier."
+  },
+  {
+    "label": "replaceAllTexture",
+    "kind": "Method",
+    "detail": "RawModel.replaceAllTexture(id: Identifier): void",
+    "documentation": "Replace all textures of this RawModel with the specified Identifier."
+  },
+  {
+    "label": "Model",
+    "kind": "Class",
+    "detail": "Uploaded GPU Model Instance",
+    "documentation": "Represents a model uploaded to the GPU. Vertices data can no longer be changed, but textures can be replaced."
+  },
+  {
+    "label": "replaceTexture",
+    "kind": "Method",
+    "detail": "Model.replaceTexture(fileName: string, id: Identifier): void",
+    "documentation": "Replace all textures ending with fileName in the uploaded model."
+  },
+  {
+    "label": "replaceAllTexture",
+    "kind": "Method",
+    "detail": "Model.replaceAllTexture(id: Identifier): void",
+    "documentation": "Replace all textures of this Model with the specified Identifier."
+  },
+  {
+    "label": "copyForMaterialChanges",
+    "kind": "Method",
+    "detail": "Model.copyForMaterialChanges(): Model",
+    "documentation": "Returns a new Model instance with copied materials, allowing texture replacement without affecting the original."
+  },
+  {
+    "label": "close",
+    "kind": "Method",
+    "detail": "Model.close(): void",
+    "documentation": "Close this Model instance and free up GPU resources."
+  },
+  {
+    "label": "RawMeshBuilder",
+    "kind": "Class",
+    "detail": "Procedural Mesh Builder",
+    "documentation": "Allows forming a RawMesh using code by defining vertices and materials."
+  },
+  {
+    "label": "RawMeshBuilder",
+    "kind": "Constructor",
+    "detail": "new RawMeshBuilder(faceSize: int, renderType: String, texture: Identifier): RawMeshBuilder",
+    "documentation": "Forms a new RawMeshBuilder. faceSize specifies vertices per face (e.g., 3 for triangles)."
+  },
+  {
+    "label": "vertex",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.vertex(pos: Vector3f): RawMeshBuilder",
+    "documentation": "Start building a vertex with the position set to pos."
+  },
+  {
+    "label": "vertex",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.vertex(x: double, y: double, z: double): RawMeshBuilder",
+    "documentation": "Start building a vertex with coordinates x, y, and z."
+  },
+  {
+    "label": "normal",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.normal(x: double, y: double, z: double): RawMeshBuilder",
+    "documentation": "Set the normal vector of the currently-building vertex."
+  },
+  {
+    "label": "uv",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.uv(x: float, y: float): RawMeshBuilder",
+    "documentation": "Set the UV value of the currently-building vertex."
+  },
+  {
+    "label": "endVertex",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.endVertex(): RawMeshBuilder",
+    "documentation": "Finish building the current vertex and add it to the mesh."
+  },
+  {
+    "label": "color",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.color(r: int, g: int, b: int, a: int): RawMeshBuilder",
+    "documentation": "Set the color of the mesh in RGBA (0-255)."
+  },
+  {
+    "label": "getMesh",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.getMesh(): RawMesh",
+    "documentation": "Obtain the RawMesh, which can be appended to a RawModel."
+  },
+  {
+    "label": "DynamicModelHolder",
+    "kind": "Class",
+    "detail": "Runtime Model Uploader",
+    "documentation": "Allows uploading models to the GPU during runtime (background threads)."
+  },
+  {
+    "label": "DynamicModelHolder",
+    "kind": "Constructor",
+    "detail": "new DynamicModelHolder(): DynamicModelHolder",
+    "documentation": "Create a new instance of DynamicModelHolder."
+  },
+  {
+    "label": "uploadLater",
+    "kind": "Method",
+    "detail": "DynamicModelHolder.uploadLater(rawModel: RawModel): void",
+    "documentation": "Request a model upload. JCM will perform the upload when the next frame comes around."
+  },
+  {
+    "label": "getUploadedModel",
+    "kind": "Method",
+    "detail": "DynamicModelHolder.getUploadedModel(): RawModel",
+    "documentation": "Obtain the uploaded GPU model, or null if the upload is pending or never requested."
+  },
+  {
+    "label": "close",
+    "kind": "Method",
+    "detail": "DynamicModelHolder.close(): void",
+    "documentation": "Close the model and free up resources."
+  }
+]

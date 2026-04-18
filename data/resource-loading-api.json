@@ -1,0 +1,80 @@
+[
+  {
+    "label": "Identifier",
+    "kind": "Class",
+    "detail": "Resource Location Identifier",
+    "documentation": "Used by Minecraft to identify files in a resource pack. Many functions require an Identifier instead of a plain string."
+  },
+  {
+    "label": "Resources",
+    "kind": "Class",
+    "detail": "Resource Access Utilities",
+    "documentation": "Allows access to file contents within resource packs and utility functions for AWT resources like Fonts."
+  },
+  {
+    "label": "id",
+    "kind": "Method",
+    "detail": "Resources.id(idStr: String): Identifier",
+    "documentation": "Create an Identifier based on the string. Example: `Resources.id(\"mtr:path/absolute.js\")`."
+  },
+  {
+    "label": "idr",
+    "kind": "Method",
+    "detail": "Resources.idr(relPath: String): Identifier",
+    "documentation": "Create an Identifier based on the relative directory of the currently executed script. **Note:** Must be used during the script parsing stage."
+  },
+  {
+    "label": "read",
+    "kind": "Method",
+    "detail": "Resources.read(id: Identifier): DataReader",
+    "documentation": "Read an asset/file in the resource pack. Returns a `DataReader` to read the file's content, or null if it doesn't exist."
+  },
+  {
+    "label": "exist",
+    "kind": "Method",
+    "detail": "Resources.exist(id: Identifier): boolean",
+    "documentation": "Returns whether the specified file exists in the resource pack."
+  },
+  {
+    "label": "manager",
+    "kind": "Method",
+    "detail": "Resources.manager(): null",
+    "documentation": "[Deprecated] Returns Minecraft's native resource manager. Currently returns null for cross-version compatibility."
+  },
+  {
+    "label": "readString",
+    "kind": "Method",
+    "detail": "Resources.readString(id: Identifier): String",
+    "documentation": "[Deprecated] Reads the contents of a resource file as a string."
+  },
+  {
+    "label": "readBufferedImage",
+    "kind": "Method",
+    "detail": "Resources.readBufferedImage(id: Identifier): BufferedImage",
+    "documentation": "[Deprecated] Loads an image file as an AWT BufferedImage."
+  },
+  {
+    "label": "readFont",
+    "kind": "Method",
+    "detail": "Resources.readFont(id: Identifier): Font",
+    "documentation": "[Deprecated] Load a custom TTF or OTF font file as an AWT Font. Note: Creates temporary files on disk."
+  },
+  {
+    "label": "getSystemFont",
+    "kind": "Method",
+    "detail": "Resources.getSystemFont(name: String): Font",
+    "documentation": "Get a system or MTR built-in AWT font. Supported names: `Noto Serif`, `Noto Sans Semibold`, `Noto Sans CJK TC Medium`, `Serif`, `SansSerif`, `Monospaced`."
+  },
+  {
+    "label": "getFontRenderContext",
+    "kind": "Method",
+    "detail": "Resources.getFontRenderContext(): FontRenderContext",
+    "documentation": "Obtain an AWT FontRenderContext for dimension measurement of text."
+  },
+  {
+    "label": "ensureStrFonts",
+    "kind": "Method",
+    "detail": "Resources.ensureStrFonts(text: String, primaryFont: Font, fallbackFonts: Font[]): AttributedString",
+    "documentation": "Get an AttributedString with font fallback logic to prevent 'Tofu' (empty squares) when rendering text with unsupported characters."
+  }
+]

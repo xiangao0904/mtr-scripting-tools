@@ -1,0 +1,15 @@
+
+[
+  {
+    "label": "BackgroundWorker",
+    "kind": "Class",
+    "detail": "Background Task Utility",
+    "documentation": "Utility class for submitting and managing tasks in background threads."
+  },
+  {
+    "label": "submit",
+    "kind": "Method",
+    "detail": "BackgroundWorker.submit(task: Runnable): void",
+    "documentation": "Submit a lambda task to the background thread. \n\n**Note:** Exception handling (try/catch) for the task should be performed within the lambda function itself."
+  }
+]

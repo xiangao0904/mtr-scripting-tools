@@ -1,0 +1,44 @@
+[
+  {
+    "label": "Files",
+    "kind": "Class",
+    "detail": "Static File Utilities",
+    "documentation": "Provides methods for reading, saving, and deleting files within the Minecraft directory and the dedicated mtrscripting data folder."
+  },
+  {
+    "label": "read",
+    "kind": "Method",
+    "detail": "Files.read(path: String...): DataReader",
+    "documentation": "Read a file based on the specified path starting from the `.minecraft` directory. Returns null if the file does not exist."
+  },
+  {
+    "label": "readData",
+    "kind": "Method",
+    "detail": "Files.readData(path: String...): DataReader",
+    "documentation": "Read a file from `.minecraft/data/mtrscripting`. It is strongly recommended to store files in a sub-directory with a unique name to avoid collisions."
+  },
+  {
+    "label": "saveData",
+    "kind": "Method",
+    "detail": "Files.saveData(content: String, path: String...): void",
+    "documentation": "Save plain text content to the corresponding path relative to `.minecraft/data/mtrscripting`. Parent directories are automatically generated if they don't exist."
+  },
+  {
+    "label": "saveData",
+    "kind": "Method",
+    "detail": "Files.saveData(content: BufferedImage, path: String...): void",
+    "documentation": "Save a `BufferedImage` to the corresponding path relative to `.minecraft/data/mtrscripting`. Parent directories are automatically generated if they don't exist."
+  },
+  {
+    "label": "deleteData",
+    "kind": "Method",
+    "detail": "Files.deleteData(path: String...): void",
+    "documentation": "Delete the file from the specified path relative to `.minecraft/data/mtrscripting`."
+  },
+  {
+    "label": "hasData",
+    "kind": "Method",
+    "detail": "Files.hasData(path: String...): boolean",
+    "documentation": "Returns whether the specified file or directory exists relative to `.minecraft/data/mtrscripting`."
+  }
+]

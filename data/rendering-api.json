@@ -1,0 +1,122 @@
+[
+  {
+    "label": "RenderManager",
+    "kind": "Class",
+    "detail": "Global Rendering Manager",
+    "documentation": "The central manager for submitting draw calls to the rendering pipeline."
+  },
+  {
+    "label": "queue",
+    "kind": "Method",
+    "detail": "RenderManager.queue(call: DrawCall): void",
+    "documentation": "Submit a draw call (QuadDrawCall or ModelDrawCall) to the RenderManager for execution."
+  },
+  {
+    "label": "QuadDrawCall",
+    "kind": "Class",
+    "detail": "Procedural Quad Renderer",
+    "documentation": "A draw call used to render a single 2D or 3D quadrilateral (quad) with custom coordinates, textures, and UVs."
+  },
+  {
+    "label": "create",
+    "kind": "Method",
+    "detail": "QuadDrawCall.create(): QuadDrawCall",
+    "documentation": "Creates a new QuadDrawCall instance."
+  },
+  {
+    "label": "create",
+    "kind": "Method",
+    "detail": "QuadDrawCall.create(comment: String): QuadDrawCall",
+    "documentation": "Creates a QuadDrawCall with a comment for annotation and code readability."
+  },
+  {
+    "label": "quad",
+    "kind": "Method",
+    "detail": "QuadDrawCall.quad(corner1: Vector3f, corner2: Vector3f, corner3: Vector3f, corner4: Vector3f): QuadDrawCall",
+    "documentation": "Specify the coordinates for all four corners/vertices of the quad at once."
+  },
+  {
+    "label": "corner1",
+    "kind": "Method",
+    "detail": "QuadDrawCall.corner1(pos: Vector3f): QuadDrawCall",
+    "documentation": "Specify the Vector3f coordinate of the first corner/vertex."
+  },
+  {
+    "label": "corner2",
+    "kind": "Method",
+    "detail": "QuadDrawCall.corner2(pos: Vector3f): QuadDrawCall",
+    "documentation": "Specify the Vector3f coordinate of the second corner/vertex."
+  },
+  {
+    "label": "corner3",
+    "kind": "Method",
+    "detail": "QuadDrawCall.corner3(pos: Vector3f): QuadDrawCall",
+    "documentation": "Specify the Vector3f coordinate of the third corner/vertex."
+  },
+  {
+    "label": "corner4",
+    "kind": "Method",
+    "detail": "QuadDrawCall.corner4(pos: Vector3f): QuadDrawCall",
+    "documentation": "Specify the Vector3f coordinate of the final corner/vertex."
+  },
+  {
+    "label": "renderType",
+    "kind": "Method",
+    "detail": "QuadDrawCall.renderType(renderType: String): QuadDrawCall",
+    "documentation": "Specify a render type. Supported values: EXTERIOR, EXTERIOR_TRANSLUCENT, INTERIOR, INTERIOR_TRANSLUCENT, LIGHT (default), and LIGHT_TRANSLUCENT."
+  },
+  {
+    "label": "color",
+    "kind": "Method",
+    "detail": "QuadDrawCall.color(rgb: int): QuadDrawCall",
+    "documentation": "Specify the color tint of this quad using an RGB integer (e.g., 0xFF0000 for red)."
+  },
+  {
+    "label": "texture",
+    "kind": "Method",
+    "detail": "QuadDrawCall.texture(id: Identifier): QuadDrawCall",
+    "documentation": "Assign a texture to the quad using the specified texture Identifier."
+  },
+  {
+    "label": "uv",
+    "kind": "Method",
+    "detail": "QuadDrawCall.uv(u1: float, v1: float, u2: float, v2: float): QuadDrawCall",
+    "documentation": "Specify the UV coordinates ranging from 0 to 1."
+  },
+  {
+    "label": "matrices",
+    "kind": "Method",
+    "detail": "QuadDrawCall.matrices(matrices: Matrices): QuadDrawCall",
+    "documentation": "Supply a Matrices object to apply transformations (translation, rotation, scale) to the quad."
+  },
+  {
+    "label": "ModelDrawCall",
+    "kind": "Class",
+    "detail": "3D Model Renderer",
+    "documentation": "A draw call used to render complex 3D models previously loaded and uploaded via ModelManager."
+  },
+  {
+    "label": "create",
+    "kind": "Method",
+    "detail": "ModelDrawCall.create(): ModelDrawCall",
+    "documentation": "Creates a new ModelDrawCall instance."
+  },
+  {
+    "label": "create",
+    "kind": "Method",
+    "detail": "ModelDrawCall.create(comment: String): ModelDrawCall",
+    "documentation": "Creates a ModelDrawCall with a comment for annotation and code readability."
+  },
+  {
+    "label": "modelObject",
+    "kind": "Method",
+    "detail": "ModelDrawCall.modelObject(model: Model): ModelDrawCall",
+    "documentation": "Specify the uploaded Model object to render."
+  },
+  {
+    "label": "matrices",
+    "kind": "Method",
+    "detail": "ModelDrawCall.matrices(matrices: Matrices): ModelDrawCall",
+    "documentation": "Supply a Matrices object to apply transformations to the entire model."
+  }
+]

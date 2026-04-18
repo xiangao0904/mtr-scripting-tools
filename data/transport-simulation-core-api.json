@@ -1,0 +1,518 @@
+[
+  {
+    "label": "Siding",
+    "kind": "Class",
+    "detail": "Siding Rail Data",
+    "documentation": "Represents a siding rail in the transit system."
+  },
+  {
+    "label": "getName",
+    "kind": "Method",
+    "detail": "Siding.getName(): String",
+    "documentation": "Returns the siding name / siding number."
+  },
+  {
+    "label": "getHexId",
+    "kind": "Method",
+    "detail": "Siding.getHexId(): String",
+    "documentation": "Get the id of the siding, formatted in hexidecimal."
+  },
+  {
+    "label": "getId",
+    "kind": "Method",
+    "detail": "Siding.getId(): long",
+    "documentation": "Returns the unique long ID of the siding."
+  },
+  {
+    "label": "getRailLength",
+    "kind": "Method",
+    "detail": "Siding.getRailLength(): double",
+    "documentation": "Returns the length of the siding in meters."
+  },
+  {
+    "label": "getDepotName",
+    "kind": "Method",
+    "detail": "Siding.getDepotName(): String",
+    "documentation": "Returns the name of the depot containing this siding. Returns empty string if no reference exists."
+  },
+  {
+    "label": "getEarlyVehicleIncreaseDwellTime",
+    "kind": "Method",
+    "detail": "Siding.getEarlyVehicleIncreaseDwellTime(): boolean",
+    "documentation": "Returns whether vehicle will extend its dwell time if arriving early."
+  },
+  {
+    "label": "getMaxVehicles",
+    "kind": "Method",
+    "detail": "Siding.getMaxVehicles(): int",
+    "documentation": "Returns the maximum number of vehicles for this siding. 0 indicates unlimited."
+  },
+  {
+    "label": "getIsUnlimited",
+    "kind": "Method",
+    "detail": "Siding.getIsUnlimited(): boolean",
+    "documentation": "Returns whether the siding allows unlimited vehicles."
+  },
+  {
+    "label": "getDelayedVehicleSpeedIncreasePercentage",
+    "kind": "Method",
+    "detail": "Siding.getDelayedVehicleSpeedIncreasePercentage(): int",
+    "documentation": "Returns the speed increase percentage for late trains (integer form)."
+  },
+  {
+    "label": "getDelayedVehicleReduceDwellTimePercentage",
+    "kind": "Method",
+    "detail": "Siding.getDelayedVehicleReduceDwellTimePercentage(): int",
+    "documentation": "Returns the dwell time reduction percentage for late trains (integer form)."
+  },
+  {
+    "label": "getMidPosition",
+    "kind": "Method",
+    "detail": "Siding.getMidPosition(): Position",
+    "documentation": "Returns the Position in the middle of the siding rail."
+  },
+  {
+    "label": "containsPos",
+    "kind": "Method",
+    "detail": "Siding.containsPos(pos: Position): boolean",
+    "documentation": "Whether pos is equal to the start or end of the rail position."
+  },
+  {
+    "label": "Platform",
+    "kind": "Class",
+    "detail": "Platform Rail Data",
+    "documentation": "Represents a platform rail where vehicles stop for passengers."
+  },
+  {
+    "label": "routes",
+    "kind": "Property",
+    "detail": "Platform.routes: ObjectAVLTreeSet<Route>",
+    "documentation": "A list of routes that goes through this platform."
+  },
+  {
+    "label": "routeColors",
+    "kind": "Property",
+    "detail": "Platform.routeColors: IntAVLTreeSet",
+    "documentation": "All colors of routes that go through this platform."
+  },
+  {
+    "label": "getName",
+    "kind": "Method",
+    "detail": "Platform.getName(): String",
+    "documentation": "Returns the platform name / platform number."
+  },
+  {
+    "label": "getHexId",
+    "kind": "Method",
+    "detail": "Platform.getHexId(): String",
+    "documentation": "Get the hexadecimal ID of the platform."
+  },
+  {
+    "label": "getId",
+    "kind": "Method",
+    "detail": "Platform.getId(): long",
+    "documentation": "Returns the unique long ID of the platform."
+  },
+  {
+    "label": "getDwellTime",
+    "kind": "Method",
+    "detail": "Platform.getDwellTime(): long",
+    "documentation": "The dwell time duration of the platform in milliseconds."
+  },
+  {
+    "label": "getMidPosition",
+    "kind": "Method",
+    "detail": "Platform.getMidPosition(): Position",
+    "documentation": "Returns the Position in the middle of the platform rail."
+  },
+  {
+    "label": "containsPos",
+    "kind": "Method",
+    "detail": "Platform.containsPos(pos: Position): boolean",
+    "documentation": "Whether pos is equal to the start or end of the rail position."
+  },
+  {
+    "label": "Station",
+    "kind": "Class",
+    "detail": "Station Area Data",
+    "documentation": "Represents a Station area containing platforms and exits."
+  },
+  {
+    "label": "getHexId",
+    "kind": "Method",
+    "detail": "Station.getHexId(): String",
+    "documentation": "Get the hexadecimal ID of the station."
+  },
+  {
+    "label": "getId",
+    "kind": "Method",
+    "detail": "Station.getId(): long",
+    "documentation": "Returns the unique long ID of the station."
+  },
+  {
+    "label": "getName",
+    "kind": "Method",
+    "detail": "Station.getName(): String",
+    "documentation": "Returns the station name."
+  },
+  {
+    "label": "getColor",
+    "kind": "Method",
+    "detail": "Station.getColor(): int",
+    "documentation": "Returns the RGB color of the station."
+  },
+  {
+    "label": "getColorHex",
+    "kind": "Method",
+    "detail": "Station.getColorHex(): String",
+    "documentation": "Returns the hexadecimal RGB color of the station."
+  },
+  {
+    "label": "getZone1",
+    "kind": "Method",
+    "detail": "Station.getZone1(): long",
+    "documentation": "Returns Fare Zone 1 of the station."
+  },
+  {
+    "label": "getZone2",
+    "kind": "Method",
+    "detail": "Station.getZone2(): long",
+    "documentation": "Returns Fare Zone 2 of the station."
+  },
+  {
+    "label": "getZone3",
+    "kind": "Method",
+    "detail": "Station.getZone3(): long",
+    "documentation": "Returns Fare Zone 3 of the station."
+  },
+  {
+    "label": "getMinX",
+    "kind": "Method",
+    "detail": "Station.getMinX(): long",
+    "documentation": "Returns the minimum X position of the station area."
+  },
+  {
+    "label": "getMaxX",
+    "kind": "Method",
+    "detail": "Station.getMaxX(): long",
+    "documentation": "Returns the maximum X position of the station area."
+  },
+  {
+    "label": "inArea",
+    "kind": "Method",
+    "detail": "Station.inArea(pos: Position): boolean",
+    "documentation": "Whether a Position is inside the station area."
+  },
+  {
+    "label": "isTransportMode",
+    "kind": "Method",
+    "detail": "Station.isTransportMode(mode: TransportMode): boolean",
+    "documentation": "Whether the given TransportMode matches the station's assigned mode."
+  },
+  {
+    "label": "getCenter",
+    "kind": "Method",
+    "detail": "Station.getCenter(): Position",
+    "documentation": "Returns the Position of the station area's center point."
+  },
+  {
+    "label": "getExits",
+    "kind": "Method",
+    "detail": "Station.getExits(): List<StationExit>",
+    "documentation": "Returns a list of station exits."
+  },
+  {
+    "label": "StationExit",
+    "kind": "Class",
+    "detail": "Station Exit Info",
+    "documentation": "Represents a Station Exit entry."
+  },
+  {
+    "label": "getName",
+    "kind": "Method",
+    "detail": "StationExit.getName(): String",
+    "documentation": "Returns the name of the exit (e.g., Exit letter)."
+  },
+  {
+    "label": "getDestinations",
+    "kind": "Method",
+    "detail": "StationExit.getDestinations(): List<String>",
+    "documentation": "Returns a list of destinations configured for the exit."
+  },
+  {
+    "label": "TransportMode",
+    "kind": "Class",
+    "detail": "Transport Type Enum",
+    "documentation": "Represents a type of transport (Train, Boat, Cable Car, etc.)."
+  },
+  {
+    "label": "TRAIN",
+    "kind": "Property",
+    "detail": "TransportMode.TRAIN: TransportMode",
+    "documentation": "Instance of TransportMode representing rail transport."
+  },
+  {
+    "label": "BOAT",
+    "kind": "Property",
+    "detail": "TransportMode.BOAT: TransportMode",
+    "documentation": "Instance of TransportMode representing boat transport."
+  },
+  {
+    "label": "CABLE_CAR",
+    "kind": "Property",
+    "detail": "TransportMode.CABLE_CAR: TransportMode",
+    "documentation": "Instance of TransportMode representing cable car transport."
+  },
+  {
+    "label": "AIRPLANE",
+    "kind": "Property",
+    "detail": "TransportMode.AIRPLANE: TransportMode",
+    "documentation": "Instance of TransportMode representing air transport."
+  },
+  {
+    "label": "maxLength",
+    "kind": "Property",
+    "detail": "TransportMode.maxLength: int",
+    "documentation": "Returns the maximum vehicle length allowed for the transport."
+  },
+  {
+    "label": "SimplifiedRoute",
+    "kind": "Class",
+    "detail": "Client-side Route Info",
+    "documentation": "A Route object optimized for client-side consumption."
+  },
+  {
+    "label": "getName",
+    "kind": "Method",
+    "detail": "SimplifiedRoute.getName(): String",
+    "documentation": "Returns the route name."
+  },
+  {
+    "label": "getId",
+    "kind": "Method",
+    "detail": "SimplifiedRoute.getId(): long",
+    "documentation": "Returns the unique ID of the route."
+  },
+  {
+    "label": "getColor",
+    "kind": "Method",
+    "detail": "SimplifiedRoute.getColor(): int",
+    "documentation": "Returns the RGB color of the route."
+  },
+  {
+    "label": "getCircularState",
+    "kind": "Method",
+    "detail": "SimplifiedRoute.getCircularState(): Route.CircularState",
+    "documentation": "Returns the Circular State of the route."
+  },
+  {
+    "label": "getPlatforms",
+    "kind": "Method",
+    "detail": "SimplifiedRoute.getPlatforms(): List<SimplifiedRoutePlatform>",
+    "documentation": "Returns a list of stop points (SimplifiedRoutePlatform) for the route."
+  },
+  {
+    "label": "getPlatformIndex",
+    "kind": "Method",
+    "detail": "SimplifiedRoute.getPlatformIndex(platformId: long): int",
+    "documentation": "Returns the index of the first instance of the platform in the route. -1 if not found."
+  },
+  {
+    "label": "SimplifiedRoutePlatform",
+    "kind": "Class",
+    "detail": "Route Stop Info",
+    "documentation": "Represents a specific stop/platform in a route."
+  },
+  {
+    "label": "getPlatformId",
+    "kind": "Method",
+    "detail": "SimplifiedRoutePlatform.getPlatformId(): long",
+    "documentation": "Returns the ID of the platform."
+  },
+  {
+    "label": "getStationName",
+    "kind": "Method",
+    "detail": "SimplifiedRoutePlatform.getStationName(): String",
+    "documentation": "Returns the name of the belonging station area."
+  },
+  {
+    "label": "getDestination",
+    "kind": "Method",
+    "detail": "SimplifiedRoutePlatform.getDestination(): String",
+    "documentation": "Returns the destination string of this platform in the route."
+  },
+  {
+    "label": "CircularState",
+    "kind": "Class",
+    "detail": "Route Circular Enum",
+    "documentation": "Represents circular state options for a route."
+  },
+  {
+    "label": "NONE",
+    "kind": "Property",
+    "detail": "CircularState.NONE: CircularState",
+    "documentation": "The route is not circular."
+  },
+  {
+    "label": "CLOCKWISE",
+    "kind": "Property",
+    "detail": "CircularState.CLOCKWISE: CircularState",
+    "documentation": "The route is clockwise circular."
+  },
+  {
+    "label": "ANTICLOCKWISE",
+    "kind": "Property",
+    "detail": "CircularState.ANTICLOCKWISE: CircularState",
+    "documentation": "The route is anti-clockwise circular."
+  },
+  {
+    "label": "Vehicle",
+    "kind": "Class",
+    "detail": "Vehicle Formation",
+    "documentation": "Represents a vehicle formation or consist."
+  },
+  {
+    "label": "vehicleExtraData",
+    "kind": "Property",
+    "detail": "Vehicle.vehicleExtraData: VehicleExtraData",
+    "documentation": "Real-time data related to operations (speed, next stop, etc.)."
+  },
+  {
+    "label": "VehicleExtraData",
+    "kind": "Class",
+    "detail": "Vehicle Operational Data",
+    "documentation": "Represents real-time operational data of a vehicle."
+  },
+  {
+    "label": "getSidingId",
+    "kind": "Method",
+    "detail": "VehicleExtraData.getSidingId(): long",
+    "documentation": "Returns the ID of the siding this vehicle belongs to."
+  },
+  {
+    "label": "getStopIndex",
+    "kind": "Method",
+    "detail": "VehicleExtraData.getStopIndex(): int",
+    "documentation": "Returns the next stop index along the path."
+  },
+  {
+    "label": "getIsTerminating",
+    "kind": "Method",
+    "detail": "VehicleExtraData.getIsTerminating(): boolean",
+    "documentation": "Returns whether the train has reached the last stop or beyond."
+  },
+  {
+    "label": "getSpeedTarget",
+    "kind": "Method",
+    "detail": "VehicleExtraData.getSpeedTarget(): double",
+    "documentation": "Returns the target speed in m/ms."
+  },
+  {
+    "label": "getThisRouteId",
+    "kind": "Method",
+    "detail": "VehicleExtraData.getThisRouteId(): long",
+    "documentation": "Returns the route ID of the current/upcoming stop."
+  },
+  {
+    "label": "getNextRouteId",
+    "kind": "Method",
+    "detail": "VehicleExtraData.getNextRouteId(): long",
+    "documentation": "Returns the route ID of the next stop."
+  },
+  {
+    "label": "RouteType",
+    "kind": "Class",
+    "detail": "Route Category Enum",
+    "documentation": "Represents the category of the route (Normal, Light Rail, High Speed)."
+  },
+  {
+    "label": "NORMAL",
+    "kind": "Property",
+    "detail": "RouteType.NORMAL: RouteType",
+    "documentation": "Normal Heavy Rail route."
+  },
+  {
+    "label": "PathData",
+    "kind": "Class",
+    "detail": "Path Section Data",
+    "documentation": "Represents a single rail section of a generated path."
+  },
+  {
+    "label": "getStartDistance",
+    "kind": "Method",
+    "detail": "PathData.getStartDistance(): double",
+    "documentation": "Returns the starting distance of the path."
+  },
+  {
+    "label": "getSpeedLimitKilometersPerHour",
+    "kind": "Method",
+    "detail": "PathData.getSpeedLimitKilometersPerHour(): long",
+    "documentation": "Returns the speed limit of this rail in km/h."
+  },
+  {
+    "label": "Rail",
+    "kind": "Class",
+    "detail": "Rail Section Data",
+    "documentation": "Represents a single rail section (Node to Node)."
+  },
+  {
+    "label": "canAccelerate",
+    "kind": "Method",
+    "detail": "Rail.canAccelerate(): boolean",
+    "documentation": "Returns whether the train can accelerate on this rail."
+  },
+  {
+    "label": "Vector",
+    "kind": "Class",
+    "detail": "3D Coordinate Vector",
+    "documentation": "A three-dimensional vector (x, y, z)."
+  },
+  {
+    "label": "rotateY",
+    "kind": "Method",
+    "detail": "Vector.rotateY(angle: double): Vector",
+    "documentation": "Rotate the vector in the y-axis by angle. Returns a new rotated Vector."
+  },
+  {
+    "label": "distanceTo",
+    "kind": "Method",
+    "detail": "Vector.distanceTo(vec: Vector): double",
+    "documentation": "Returns the distance in meters in comparison to vec."
+  },
+  {
+    "label": "Position",
+    "kind": "Class",
+    "detail": "Block Position Data",
+    "documentation": "Represents an integer block position (x, y, z)."
+  },
+  {
+    "label": "Position",
+    "kind": "Constructor",
+    "detail": "new Position(x: long, y: long, z: long): Position",
+    "documentation": "Constructor, create a Position from the specified x y z coordinates."
+  },
+  {
+    "label": "Position",
+    "kind": "Constructor",
+    "detail": "new Position(railPosition: Vector): Position",
+    "documentation": "Constructor, converting a Vector to a Position by rounding down."
+  },
+  {
+    "label": "getX",
+    "kind": "Method",
+    "detail": "Position.getX(): long",
+    "documentation": "Return the x position."
+  },
+  {
+    "label": "offset",
+    "kind": "Method",
+    "detail": "Position.offset(offsetX: long, offsetY: long, offsetZ: long): Position",
+    "documentation": "Returns a copy of the position with the specified offset."
+  },
+  {
+    "label": "getMin",
+    "kind": "Method",
+    "detail": "Position.getMin(pos1: Position?, pos2: Position?): Position",
+    "documentation": "Returns a new Position with the minimum values of the given two positions."
+  }
+]

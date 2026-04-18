@@ -1,0 +1,86 @@
+[
+  {
+    "label": "SoundManager",
+    "kind": "Class",
+    "detail": "Global Sound Manager",
+    "documentation": "Static class for managing and playing sounds in the game environment."
+  },
+  {
+    "label": "playLocalSound",
+    "kind": "Method",
+    "detail": "SoundManager.playLocalSound(id: Identifier, volume: float, pitch: float): void",
+    "documentation": "Plays a sound by its ID. The sound is **not** localized to a specific position and is played at a constant volume. Ideal for UI sounds or train announcements."
+  },
+  {
+    "label": "playSound",
+    "kind": "Method",
+    "detail": "SoundManager.playSound(id: Identifier, pos: Vector3f, volume: float, pitch: float): void",
+    "documentation": "Plays a sound at a specific `Vector3f` position in the world relative to the current base position."
+  },
+  {
+    "label": "play",
+    "kind": "Method",
+    "detail": "SoundManager.play(soundInstance: TickableSoundInstance): void",
+    "documentation": "Begins playing a `TickableSoundInstance` in the game."
+  },
+  {
+    "label": "stop",
+    "kind": "Method",
+    "detail": "SoundManager.stop(soundInstance: TickableSoundInstance): void",
+    "documentation": "Stops an active `TickableSoundInstance` in the game."
+  },
+  {
+    "label": "TickableSoundInstance",
+    "kind": "Class",
+    "detail": "Dynamic Sound Instance",
+    "documentation": "Represents a sound instance that can be updated (position, volume, pitch) while playing and supports looping."
+  },
+  {
+    "label": "create",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.create(id: Identifier, soundCategory: String): TickableSoundInstance",
+    "documentation": "Creates a `TickableSoundInstance`. Supported categories: `MASTER`, `BLOCKS`, `MUSIC`, `RECORDS`, `WEATHER`, `HOSTILE`, `NEUTRAL`, `PLAYERS`, `AMBIENT`, `VOICE`."
+  },
+  {
+    "label": "setSoundVolume",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.setSoundVolume(volume: float): TickableSoundInstance",
+    "documentation": "Sets the volume of the sound instance. `1.0` is the default volume."
+  },
+  {
+    "label": "setSoundPitch",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.setSoundPitch(pitch: float): TickableSoundInstance",
+    "documentation": "Sets the pitch of the sound instance. `1.0` is the default pitch."
+  },
+  {
+    "label": "setLoopable",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.setLoopable(loopable: boolean): TickableSoundInstance",
+    "documentation": "Sets whether the sound will play again automatically after playback has finished."
+  },
+  {
+    "label": "setLoopDelay",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.setLoopDelay(delayTick: int): TickableSoundInstance",
+    "documentation": "Sets the delay (in Minecraft ticks) before the sound loops again if looping is enabled."
+  },
+  {
+    "label": "setRelative",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.setRelative(relative: boolean): TickableSoundInstance",
+    "documentation": "If `relative` is true, the sound is played relative to the player's position at a static volume. Otherwise, it uses spatial positioning and attenuation."
+  },
+  {
+    "label": "setPos",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.setPos(pos: Vector3f): TickableSoundInstance",
+    "documentation": "Sets the spatial position of the sound using a `Vector3f`."
+  },
+  {
+    "label": "isPlaying",
+    "kind": "Method",
+    "detail": "TickableSoundInstance.isPlaying(): boolean",
+    "documentation": "Returns whether the sound instance is currently playing."
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "label": "GraphicsTexture",
+    "kind": "Class",
+    "detail": "Dynamic Graphics Texture",
+    "documentation": "A dynamic texture that can be drawn upon using Java AWT Graphics2D. Useful for per-block or per-train displays."
+  },
+  {
+    "label": "GraphicsTexture",
+    "kind": "Constructor",
+    "detail": "new GraphicsTexture(width: int, height: int): GraphicsTexture",
+    "documentation": "Creates a GraphicsTexture with the specified width and height in pixels. Should be initialized in the `create` function."
+  },
+  {
+    "label": "identifier",
+    "kind": "Property",
+    "detail": "GraphicsTexture.identifier: Identifier",
+    "documentation": "The unique Identifier of this dynamic texture. Use this to bind the texture to models or draw calls."
+  },
+  {
+    "label": "bufferedImage",
+    "kind": "Property",
+    "detail": "GraphicsTexture.bufferedImage: BufferedImage",
+    "documentation": "The underlying Java AWT BufferedImage used as a temporary canvas."
+  },
+  {
+    "label": "graphics",
+    "kind": "Property",
+    "detail": "GraphicsTexture.graphics: Graphics2D",
+    "documentation": "The AWT Graphics2D object for this texture. Use this to perform drawing operations."
+  },
+  {
+    "label": "upload",
+    "kind": "Method",
+    "detail": "GraphicsTexture.upload(): void",
+    "documentation": "Syncs the bufferedImage content to GPU memory. Warning: High frequency calls will reduce FPS; use with RateLimit."
+  },
+  {
+    "label": "close",
+    "kind": "Method",
+    "detail": "GraphicsTexture.close(): void",
+    "documentation": "Releases the memory used by this texture. Must be called in the `dispose` function to prevent memory leaks."
+  },
+  {
+    "label": "decode",
+    "kind": "Method",
+    "detail": "Color.decode(nm: String): Color",
+    "documentation": "Converts a String (like hex #FFFFFF) to a Color object."
+  },
+  {
+    "label": "Color",
+    "kind": "Constructor",
+    "detail": "new Color(r: int, g: int, b: int, a: int): Color",
+    "documentation": "Creates a new Color with RGBA values (0-255)."
+  },
+  {
+    "label": "setColor",
+    "kind": "Method",
+    "detail": "Graphics.setColor(color: Color): void",
+    "documentation": "Sets the current drawing color for the graphics context."
+  },
+  {
+    "label": "setFont",
+    "kind": "Method",
+    "detail": "Graphics.setFont(font: Font): void",
+    "documentation": "Sets the font for subsequent text rendering operations."
+  },
+  {
+    "label": "setStroke",
+    "kind": "Method",
+    "detail": "Graphics.setStroke(stroke: Stroke): void",
+    "documentation": "Sets the stroke for the graphics context (e.g., line thickness via BasicStroke)."
+  },
+  {
+    "label": "drawRect",
+    "kind": "Method",
+    "detail": "Graphics.drawRect(x: int, y: int, width: int, height: int): void",
+    "documentation": "Draws the outline of the specified rectangle."
+  },
+  {
+    "label": "fillRect",
+    "kind": "Method",
+    "detail": "Graphics.fillRect(x: int, y: int, width: int, height: int): void",
+    "documentation": "Fills the specified rectangle with the current color."
+  },
+  {
+    "label": "drawImage",
+    "kind": "Method",
+    "detail": "Graphics.drawImage(img: Image, x: int, y: int, observer: ImageObserver): boolean",
+    "documentation": "Draws an image onto the graphics canvas at the specified location."
+  },
+  {
+    "label": "drawString",
+    "kind": "Method",
+    "detail": "Graphics.drawString(str: String, x: int, y: int): void",
+    "documentation": "Renders the specified string at the given coordinates."
+  },
+  {
+    "label": "setComposite",
+    "kind": "Method",
+    "detail": "Graphics.setComposite(comp: Composite): void",
+    "documentation": "Sets the Composite for the Graphics2D context (e.g., for transparency/alpha blending)."
+  }
+]

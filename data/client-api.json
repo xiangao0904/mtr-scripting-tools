@@ -1,0 +1,122 @@
+[
+  {
+    "label": "MinecraftClientData",
+    "kind": "Class",
+    "detail": "MTR Client Data Store",
+    "documentation": "The primary data store for Minecraft Transport Simulator (MTR) client-side data, including vehicles, routes, lifts, and rails."
+  },
+  {
+    "label": "getInstance",
+    "kind": "Method",
+    "detail": "MinecraftClientData.getInstance(): MinecraftClientData",
+    "documentation": "Returns the singleton instance of the client data used for the active world."
+  },
+  {
+    "label": "getDashboardInstance",
+    "kind": "Method",
+    "detail": "MinecraftClientData.getDashboardInstance(): MinecraftClientData",
+    "documentation": "Returns the instance of the client data used specifically for the dashboard UI."
+  },
+  {
+    "label": "getLift",
+    "kind": "Method",
+    "detail": "MinecraftClientData.getLift(liftId: long): Lift?",
+    "documentation": "Finds and returns a Lift object by its unique ID. Returns null if not found."
+  },
+  {
+    "label": "hasPermission",
+    "kind": "Method",
+    "detail": "MinecraftClientData.hasPermission(): boolean",
+    "documentation": "Checks if the current player has permission to perform administrative actions (Creative or Survival mode)."
+  },
+  {
+    "label": "getFacingRailAndBlockPos",
+    "kind": "Method",
+    "detail": "MinecraftClientData.getFacingRailAndBlockPos(includeCableType: boolean): ObjectObjectImmutablePair<Rail, BlockPos>?",
+    "documentation": "Returns the rail and block position currently being looked at by the player's crosshair."
+  },
+  {
+    "label": "sync",
+    "kind": "Method",
+    "detail": "MinecraftClientData.sync(): void",
+    "documentation": "Synchronizes the local client data maps with the underlying world data, ensuring IDs and objects are aligned."
+  },
+  {
+    "label": "getRouteIdHasDisabledAnnouncements",
+    "kind": "Method",
+    "detail": "MinecraftClientData.getRouteIdHasDisabledAnnouncements(routeId: long): boolean",
+    "documentation": "Checks if station announcements are disabled for a specific route ID."
+  },
+  {
+    "label": "setRouteIdHasDisabledAnnouncements",
+    "kind": "Method",
+    "detail": "MinecraftClientData.setRouteIdHasDisabledAnnouncements(routeId: long, isDisabled: boolean): void",
+    "documentation": "Enables or disables station announcements for the specified route ID."
+  },
+  {
+    "label": "vehicles",
+    "kind": "Property",
+    "detail": "MinecraftClientData.vehicles: ObjectArraySet<VehicleExtension>",
+    "documentation": "A set containing all currently active vehicle extensions in the client world."
+  },
+  {
+    "label": "liftWrapperList",
+    "kind": "Property",
+    "detail": "MinecraftClientData.liftWrapperList: Long2ObjectAVLTreeMap<LiftWrapper>",
+    "documentation": "A map of lift IDs to their corresponding LiftWrapper objects, used for rendering logic."
+  },
+  {
+    "label": "railWrapperList",
+    "kind": "Property",
+    "detail": "MinecraftClientData.railWrapperList: Object2ObjectArrayMap<String, RailWrapper>",
+    "documentation": "A map of rail hex IDs to their corresponding RailWrapper objects."
+  },
+  {
+    "label": "LiftWrapper",
+    "kind": "Class",
+    "detail": "Lift Rendering Wrapper",
+    "documentation": "A wrapper class for Lift objects that includes rendering state information."
+  },
+  {
+    "label": "getLift",
+    "kind": "Method",
+    "detail": "LiftWrapper.getLift(): Lift",
+    "documentation": "Returns the underlying Lift object from the wrapper."
+  },
+  {
+    "label": "shouldRender",
+    "kind": "Property",
+    "detail": "LiftWrapper.shouldRender: boolean",
+    "documentation": "A boolean flag indicating whether this lift should currently be rendered on screen."
+  },
+  {
+    "label": "RailWrapper",
+    "kind": "Class",
+    "detail": "Rail Rendering Wrapper",
+    "documentation": "A wrapper class for Rail objects containing ID, bounds, and rendering state."
+  },
+  {
+    "label": "getRail",
+    "kind": "Method",
+    "detail": "RailWrapper.getRail(): Rail",
+    "documentation": "Returns the underlying Rail object from the wrapper."
+  },
+  {
+    "label": "hexId",
+    "kind": "Property",
+    "detail": "RailWrapper.hexId: String",
+    "documentation": "The unique hexadecimal string identifier for the rail."
+  },
+  {
+    "label": "startVector",
+    "kind": "Property",
+    "detail": "RailWrapper.startVector: Vec3d",
+    "documentation": "The starting coordinate vector (minimum bounds) of the rail segment."
+  },
+  {
+    "label": "endVector",
+    "kind": "Property",
+    "detail": "RailWrapper.endVector: Vec3d",
+    "documentation": "The ending coordinate vector (maximum bounds) of the rail segment."
+  }
+]

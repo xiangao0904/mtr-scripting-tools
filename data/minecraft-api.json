@@ -1,0 +1,302 @@
+[
+{
+"label": "MinecraftClient",
+"kind": "Class",
+"detail": "Client-side Game Interface",
+"documentation": "Provides access to the client-side world, player information, and utility methods like messaging and particles."
+},
+{
+"label": "worldIsRaining",
+"kind": "Method",
+"detail": "MinecraftClient.worldIsRaining(): boolean",
+"documentation": "Returns whether it is currently raining in the world."
+},
+{
+"label": "worldIsThundering",
+"kind": "Method",
+"detail": "MinecraftClient.worldIsThundering(): boolean",
+"documentation": "Returns whether it is currently thundering in the world."
+},
+{
+"label": "worldIsRainingAt",
+"kind": "Method",
+"detail": "MinecraftClient.worldIsRainingAt(pos: Vector3f): boolean",
+"documentation": "Checks if it is raining and getting wet at the specified chunk position."
+},
+{
+"label": "worldDayTime",
+"kind": "Method",
+"detail": "MinecraftClient.worldDayTime(): int",
+"documentation": "Returns the current in-game world time in ticks."
+},
+{
+"label": "blockLightAt",
+"kind": "Method",
+"detail": "MinecraftClient.blockLightAt(pos: Vector3f): int",
+"documentation": "Returns the block light level at the specified position."
+},
+{
+"label": "skyLightAt",
+"kind": "Method",
+"detail": "MinecraftClient.skyLightAt(pos: Vector3f): int",
+"documentation": "Returns the sky light level at the specified position."
+},
+{
+"label": "lightLevelAt",
+"kind": "Method",
+"detail": "MinecraftClient.lightLevelAt(pos: Vector3f): int",
+"documentation": "Returns the combined light level at the position, preferring the lower of sky light or block light."
+},
+{
+"label": "narrate",
+"kind": "Method",
+"detail": "MinecraftClient.narrate(message: String): void",
+"documentation": "Triggers the Minecraft narrator to read the specified message aloud."
+},
+{
+"label": "localPlayer",
+"kind": "Method",
+"detail": "MinecraftClient.localPlayer(): PlayerEntity",
+"documentation": "Returns the PlayerEntity object representing the local player."
+},
+{
+"label": "getScoreboardScore",
+"kind": "Method",
+"detail": "MinecraftClient.getScoreboardScore(objectiveName: String, playerName: String): int",
+"documentation": "Retrieves the value for a specific player on a specific scoreboard objective."
+},
+{
+"label": "displayMessage",
+"kind": "Method",
+"detail": "MinecraftClient.displayMessage(message: String, actionBar: boolean): void",
+"documentation": "Displays a simple string message in the chat or action bar."
+},
+{
+"label": "displayMessage",
+"kind": "Method",
+"detail": "MinecraftClient.displayMessage(message: VanillaText, actionBar: boolean): void",
+"documentation": "Displays a styled VanillaText message in the chat or action bar."
+},
+{
+"label": "spawnParticleInWorld",
+"kind": "Method",
+"detail": "MinecraftClient.spawnParticleInWorld(particleId: Identifier, pos: Vector3f, initialVelocity: Vector3f, alwaysSpawn: boolean = false): void",
+"documentation": "Spawns a vanilla particle at the given position with an initial velocity."
+},
+{
+"label": "renderDistance",
+"kind": "Method",
+"detail": "MinecraftClient.renderDistance(): int",
+"documentation": "Returns the current render distance configured in chunks."
+},
+{
+"label": "getWorldPlayers",
+"kind": "Method",
+"detail": "MinecraftClient.getWorldPlayers(): List<PlayerEntity>",
+"documentation": "Returns a list of all PlayerEntities currently within the client's render distance."
+},
+{
+"label": "gamePaused",
+"kind": "Method",
+"detail": "MinecraftClient.gamePaused(): boolean",
+"documentation": "Returns whether the game is currently paused. Note: JCM/TSC simulation continues even when paused."
+},
+{
+"label": "VanillaText",
+"kind": "Class",
+"detail": "Minecraft Text Component",
+"documentation": "A class for creating and styling complex text components for chat, titles, and item tooltips."
+},
+{
+"label": "literal",
+"kind": "Method",
+"detail": "VanillaText.literal(str: String): VanillaText",
+"documentation": "Creates a text component from a literal string."
+},
+{
+"label": "translatable",
+"kind": "Method",
+"detail": "VanillaText.translatable(key: String, placeholders: Object...): VanillaText",
+"documentation": "Creates a text component using a translation key and optional placeholders."
+},
+{
+"label": "append",
+"kind": "Method",
+"detail": "VanillaText.append(other: VanillaText): VanillaText",
+"documentation": "Appends another VanillaText component to the current one, preserving individual styles."
+},
+{
+"label": "withBold",
+"kind": "Method",
+"detail": "VanillaText.withBold(): VanillaText",
+"documentation": "Applies a bold style to the text component."
+},
+{
+"label": "withItalic",
+"kind": "Method",
+"detail": "VanillaText.withItalic(): VanillaText",
+"documentation": "Applies an italic style to the text component."
+},
+{
+"label": "withFont",
+"kind": "Method",
+"detail": "VanillaText.withFont(id: Identifier): VanillaText",
+"documentation": "Sets a specific font Identifier for the text component."
+},
+{
+"label": "withColor",
+"kind": "Method",
+"detail": "VanillaText.withColor(rgb: int): VanillaText",
+"documentation": "Sets the text color using an RGB integer."
+},
+{
+"label": "withColor",
+"kind": "Method",
+"detail": "VanillaText.withColor(colorName: String): VanillaText",
+"documentation": "Sets the text color using a predefined color name string."
+},
+{
+"label": "getString",
+"kind": "Method",
+"detail": "VanillaText.getString(): String",
+"documentation": "Returns the final localized literal content of the text component."
+},
+{
+"label": "ItemStack",
+"kind": "Class",
+"detail": "Minecraft Item Instance",
+"documentation": "Represents an instance of an item, including its type and stack size."
+},
+{
+"label": "itemId",
+"kind": "Method",
+"detail": "ItemStack.itemId(): String",
+"documentation": "Returns the internal item ID (e.g., 'mtr:rail')."
+},
+{
+"label": "translationId",
+"kind": "Method",
+"detail": "ItemStack.translationId(): String",
+"documentation": "Returns the translation key for the item's display name."
+},
+{
+"label": "empty",
+"kind": "Method",
+"detail": "ItemStack.empty(): boolean",
+"documentation": "Returns true if the item stack is empty (e.g., Air)."
+},
+{
+"label": "count",
+"kind": "Method",
+"detail": "ItemStack.count(): int",
+"documentation": "Returns the number of items in the stack."
+},
+{
+"label": "PlayerEntity",
+"kind": "Class",
+"detail": "Minecraft Player Representation",
+"documentation": "Represents a player entity, providing access to their position, rotation, movement state, and equipment."
+},
+{
+"label": "uuid",
+"kind": "Method",
+"detail": "PlayerEntity.uuid(): String",
+"documentation": "Returns the unique UUID of the player as a string."
+},
+{
+"label": "hasPermissionLevel",
+"kind": "Method",
+"detail": "PlayerEntity.hasPermissionLevel(level: int): boolean",
+"documentation": "Checks for a specific 'OP' level. Note: This is client-side only."
+},
+{
+"label": "pos",
+"kind": "Method",
+"detail": "PlayerEntity.pos(): Vector3f",
+"documentation": "Returns the exact current position of the player."
+},
+{
+"label": "blockPos",
+"kind": "Method",
+"detail": "PlayerEntity.blockPos(): Vector3f",
+"documentation": "Returns the integer block position coordinates of the player."
+},
+{
+"label": "smoothPos",
+"kind": "Method",
+"detail": "PlayerEntity.smoothPos(): Vector3f",
+"documentation": "Returns a smoothed position vector, recommended for rendering high-FPS overlays."
+},
+{
+"label": "velocity",
+"kind": "Method",
+"detail": "PlayerEntity.velocity(): Vector3f",
+"documentation": "Returns the player's current velocity vector."
+},
+{
+"label": "yaw",
+"kind": "Method",
+"detail": "PlayerEntity.yaw(): float",
+"documentation": "Returns the horizontal (yaw) rotation of the player's head."
+},
+{
+"label": "pitch",
+"kind": "Method",
+"detail": "PlayerEntity.pitch(): float",
+"documentation": "Returns the vertical (pitch) rotation of the player's head."
+},
+{
+"label": "bodyYaw",
+"kind": "Method",
+"detail": "PlayerEntity.bodyYaw(): float",
+"documentation": "Returns the horizontal (yaw) rotation of the player's body."
+},
+{
+"label": "playerName",
+"kind": "Method",
+"detail": "PlayerEntity.playerName(): String",
+"documentation": "Returns the player's official username."
+},
+{
+"label": "isHoldingItem",
+"kind": "Method",
+"detail": "PlayerEntity.isHoldingItem(id: Identifier): boolean",
+"documentation": "Checks if the player is holding the specified item in either hand."
+},
+{
+"label": "mainHandItem",
+"kind": "Method",
+"detail": "PlayerEntity.mainHandItem(): ItemStack",
+"documentation": "Returns the item currently held in the player's main hand."
+},
+{
+"label": "offHandItem",
+"kind": "Method",
+"detail": "PlayerEntity.offHandItem(): ItemStack",
+"documentation": "Returns the item currently held in the player's offhand."
+},
+{
+"label": "activeItem",
+"kind": "Method",
+"detail": "PlayerEntity.activeItem(): ItemStack",
+"documentation": "Returns the currently active item, prioritizing the main hand."
+},
+{
+"label": "isSneaking",
+"kind": "Method",
+"detail": "PlayerEntity.isSneaking(): boolean",
+"documentation": "Returns true if the player is currently sneaking."
+},
+{
+"label": "isSprinting",
+"kind": "Method",
+"detail": "PlayerEntity.isSprinting(): boolean",
+"documentation": "Returns true if the player is currently sprinting."
+},
+{
+"label": "isSwimming",
+"kind": "Method",
+"detail": "PlayerEntity.isSwimming(): boolean",
+"documentation": "Returns true if the player is currently swimming."
+}
+]
