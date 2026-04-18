@@ -8,7 +8,7 @@
     "url": "https://github.com/xiangao0904/mtr-scripting-tools"
   },
   "icon": "icon.png",
-  "publisher": "Huli-awsl",
+  "publisher": "huliawsl",
   "engines": {
     "vscode": "^1.116.0"
   },
