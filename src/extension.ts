@@ -2,6 +2,8 @@ import * as vscode from "vscode";
 import * as fs from "fs";
 import * as path from "path";
 
+const selector = ["javascript", "typescript"];
+
 interface CodeItem {
   label: string;
   kind: string;
@@ -92,7 +94,7 @@ export function activate(context: vscode.ExtensionContext) {
    * 第一部分：代码补全 (IntelliSense)
    */
   const completionProvider = vscode.languages.registerCompletionItemProvider(
-    "javascript",
+    selector,
     {
       provideCompletionItems(document, position) {
         // 简单的前端过滤，减少 IPC 通信开销
@@ -128,7 +130,7 @@ export function activate(context: vscode.ExtensionContext) {
    * (保持原有逻辑不变)
    */
   const signatureProvider = vscode.languages.registerSignatureHelpProvider(
-    "javascript",
+    selector,
     {
       provideSignatureHelp(document, position) {
         const linePrefix = document
@@ -221,7 +223,7 @@ export function activate(context: vscode.ExtensionContext) {
   watcher.onDidDelete(() => updateAssetCache());
 
   const assetProvider = vscode.languages.registerCompletionItemProvider(
-    "javascript",
+    selector,
     {
       provideCompletionItems(
         document: vscode.TextDocument,

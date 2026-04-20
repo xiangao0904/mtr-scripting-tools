@@ -2,7 +2,7 @@
   "name": "mtr-scripting-tools",
   "displayName": "MTR Scripting Tools",
   "description": "VSCode tools for Minecraft MTR Mod scripting",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/xiangao0904/mtr-scripting-tools"
@@ -17,7 +17,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:javascript"
+    "onLanguage:javascript",
+    "onLanguage:typescript"
   ],
   "main": "./out/extension.js",
   "contributes": {

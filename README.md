@@ -7,7 +7,7 @@
 
 ---
 
-## 🚀 What's New in v0.0.2
+## 🚀 What's New in v0.0.2 & v0.0.3
 
 We have updated the extension to support the latest scripting api with better performance!
 
@@ -16,6 +16,7 @@ We have updated the extension to support the latest scripting api with better pe
     - Updated API definitions for **3D models** and **vehicle scripts**.
     - Added new **Eyecandy** and **Vehicle** and **PIDS** API files for autocompletion.
 - **Performance Optimizations**：Improved the caching mechanism to reduce latency and resource usage.
+- **TypeScript Support**：MTR API completion will also be enabled when you write TypeScript code.
 ---
 
 ## Features
