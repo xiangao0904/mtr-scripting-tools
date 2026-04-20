@@ -1,0 +1,170 @@
+[
+  {
+    "label": "create",
+    "kind": "Method",
+    "detail": "Global.create(ctx: EyeCandyScriptContext, state: object, blockEyecandy: BlockEyecandy): void",
+    "documentation": "Called when a Decoration Object block is rendered for the first time. Used for initialization operations like creating dynamic textures."
+  },
+  {
+    "label": "render",
+    "kind": "Method",
+    "detail": "Global.render(ctx: EyeCandyScriptContext, state: object, blockEyecandy: BlockEyecandy): void",
+    "documentation": "Called at-most once per frame (or less if performance is low) to render contents. Executed in a separate thread to maintain FPS."
+  },
+  {
+    "label": "dispose",
+    "kind": "Method",
+    "detail": "Global.dispose(ctx: EyeCandyScriptContext, state: object, blockEyecandy: BlockEyecandy): void",
+    "documentation": "Called when the Decoration Object block goes out of sight. Used for releasing resources like dynamic textures."
+  },
+  {
+    "label": "EyeCandyScriptContext",
+    "kind": "Class",
+    "detail": "Eyecandy Script Execution Context",
+    "documentation": "The primary context object passed to eyecandy lifecycle functions for rendering and world interaction."
+  },
+  {
+    "label": "drawModel",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.drawModel(model: ScriptedModel, matrices: Matrices?): void",
+    "documentation": "Requests JCM to render a model loaded via ModelManager. If matrices is null, the model is centered without transformation."
+  },
+  {
+    "label": "setDebugInfo",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.setDebugInfo(key: String, value: object): void",
+    "documentation": "Output debugging information to the screen overlay. Requires 'Script Debug Overlay' to be enabled in settings."
+  },
+  {
+    "label": "getRenderManager",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.getRenderManager(): RenderManager",
+    "documentation": "Obtain a RenderManager instance for rendering custom elements into the Minecraft world."
+  },
+  {
+    "label": "getSoundManager",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.getSoundManager(): SoundManager",
+    "documentation": "Obtain a SoundManager instance to play sounds relative to the block's position."
+  },
+  {
+    "label": "events",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.events(): EyecandyEvents",
+    "documentation": "Returns the EyecandyEvents object for checking and handling interaction events."
+  },
+  {
+    "label": "setOutlineShape",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.setOutlineShape(shape: VoxelShape): void",
+    "documentation": "Sets the visual hitbox (outline) of the eyecandy. No effect if the player is holding a brush."
+  },
+  {
+    "label": "setCollisionShape",
+    "kind": "Method",
+    "detail": "EyeCandyScriptContext.setCollisionShape(shape: VoxelShape): void",
+    "documentation": "Sets the physical hitbox (collision) of the eyecandy. No effect if the player is holding a brush."
+  },
+  {
+    "label": "BlockEyecandy",
+    "kind": "Class",
+    "detail": "Decoration Block Entity",
+    "documentation": "Represents a Decoration Block (Eyecandy) placed in the world."
+  },
+  {
+    "label": "getModelId",
+    "kind": "Method",
+    "detail": "BlockEyecandy.getModelId(): String?",
+    "documentation": "Returns the identifier of the model/prefab currently assigned to this block."
+  },
+  {
+    "label": "getTranslateX",
+    "kind": "Method",
+    "detail": "BlockEyecandy.getTranslateX(): float",
+    "documentation": "Returns the GUI-configured translation on the X-axis in meters."
+  },
+  {
+    "label": "getRotateY",
+    "kind": "Method",
+    "detail": "BlockEyecandy.getRotateY(): float",
+    "documentation": "Returns the GUI-configured rotation on the Y-axis in radians."
+  },
+  {
+    "label": "pos",
+    "kind": "Method",
+    "detail": "BlockEyecandy.pos(): Vector3f",
+    "documentation": "Returns the exact position of the block including GUI-configured translations."
+  },
+  {
+    "label": "blockPos",
+    "kind": "Method",
+    "detail": "BlockEyecandy.blockPos(): Vector3f",
+    "documentation": "Returns the base coordinates of the eyecandy block."
+  },
+  {
+    "label": "facing",
+    "kind": "Method",
+    "detail": "BlockEyecandy.facing(): Direction",
+    "documentation": "Returns the Minecraft direction the block is facing. Useful for VoxelShape alignment."
+  },
+  {
+    "label": "isCrosshairTarget",
+    "kind": "Method",
+    "detail": "BlockEyecandy.isCrosshairTarget(): boolean",
+    "documentation": "Returns true if the player is currently looking at this specific block."
+  },
+  {
+    "label": "redstoneLevel",
+    "kind": "Method",
+    "detail": "BlockEyecandy.redstoneLevel(): int",
+    "documentation": "Returns the redstone power level (0-15) currently powering the block."
+  },
+  {
+    "label": "EyecandyEvents",
+    "kind": "Class",
+    "detail": "Eyecandy Event Manager",
+    "documentation": "Used to detect and handle specific block-related events like clicks."
+  },
+  {
+    "label": "onBlockUse",
+    "kind": "Property",
+    "detail": "EyecandyEvents.onBlockUse: BlockUseEvent",
+    "documentation": "Event triggered when the block is right-clicked (excluding brush usage)."
+  },
+  {
+    "label": "handled",
+    "kind": "Method",
+    "detail": "EyecandyEvents.handled(): void",
+    "documentation": "Resets the current event state. Should be called after processing onBlockUse."
+  },
+  {
+    "label": "BlockUseEvent",
+    "kind": "Class",
+    "detail": "Block Interaction Event Data",
+    "documentation": "Contains details about a right-click interaction with the block."
+  },
+  {
+    "label": "occurred",
+    "kind": "Method",
+    "detail": "BlockUseEvent.occurred(): boolean",
+    "documentation": "Returns true if a block use interaction has been initiated."
+  },
+  {
+    "label": "detail",
+    "kind": "Method",
+    "detail": "BlockUseEvent.detail(): BlockUseDetail",
+    "documentation": "Returns detailed information about the player and item involved in the interaction."
+  },
+  {
+    "label": "player",
+    "kind": "Method",
+    "detail": "BlockUseDetail.player(): PlayerEntity",
+    "documentation": "Returns the PlayerEntity who interacted with the block."
+  },
+  {
+    "label": "item",
+    "kind": "Method",
+    "detail": "BlockUseDetail.item(): ItemStack",
+    "documentation": "Returns the ItemStack the player was holding during the interaction."
+  }
+]

@@ -1,0 +1,194 @@
+[
+  {
+    "label": "VehicleScriptContext",
+    "kind": "Class",
+    "detail": "Vehicle Scripting Context",
+    "documentation": "The primary context for vehicle scripts, providing methods for rendering, sound, and data management."
+  },
+  {
+    "label": "drawCarModel",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.drawCarModel(model: Model, carIndex: int, matrices: Matrices?): void",
+    "documentation": "Requests a Model to be drawn. `carIndex` is the car number. If `matrices` is null, the model is placed in the car center without transformation."
+  },
+  {
+    "label": "playCarSound",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.playCarSound(sound: Identifier, carIndex: int, x: float, y: float, z: float, volume: float, pitch: float): void",
+    "documentation": "Plays a positional sound relative to the car's center. `volume` and `pitch` base value is 1.0."
+  },
+  {
+    "label": "playAnnSound",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.playAnnSound(sound: Identifier, carIndex: int, x: float, y: float, z: float, volume: float, pitch: float): void",
+    "documentation": "Plays a non-positional announcement sound (only if player is boarded). Arguments are identical to `playCarSound`."
+  },
+  {
+    "label": "getCarRenderManager",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.getCarRenderManager(carIndex: int): RenderManager?",
+    "documentation": "Obtain a RenderManager instance for the specified car index. Returns null if the index is not associated with this script entry."
+  },
+  {
+    "label": "getCarSoundManager",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.getCarSoundManager(carIndex: int): SoundManager?",
+    "documentation": "Obtain a SoundManager instance for the specified car index. Returns null if the index is not associated with this script entry."
+  },
+  {
+    "label": "getScriptEntryId",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.getScriptEntryId(): String",
+    "documentation": "Returns the unique ID of the current script entry."
+  },
+  {
+    "label": "getMyCars",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.getMyCars(): int[]",
+    "documentation": "Returns an array of car indexes associated with the current script entry."
+  },
+  {
+    "label": "setDataFetchMode",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.setDataFetchMode(mode: String): void",
+    "documentation": "Sets the Data Fetch Mode. Supported values: 'SKIP', 'ALL', or 'MANDATORY'."
+  },
+  {
+    "label": "setDebugInfo",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.setDebugInfo(key: String, value: object): void",
+    "documentation": "Outputs debugging information to the screen overlay. `value` is converted to string, except for `GraphicsTexture`."
+  },
+  {
+    "label": "Vehicle",
+    "kind": "Class",
+    "detail": "Active Transit Vehicle",
+    "documentation": "Represents the current vehicle being scripted, providing access to its state, pathing, and physical properties."
+  },
+  {
+    "label": "getStops",
+    "kind": "Method",
+    "detail": "Vehicle.getStops(): List<Stop>",
+    "documentation": "Returns a list of all stops across all routes assigned to this vehicle."
+  },
+  {
+    "label": "getThisRouteStops",
+    "kind": "Method",
+    "detail": "Vehicle.getThisRouteStops(): List<Stop>",
+    "documentation": "Returns a list of stops for the route currently being run."
+  },
+  {
+    "label": "getNextStopIndex",
+    "kind": "Method",
+    "detail": "Vehicle.getNextStopIndex(stopList: List<Stop>, overrunTolerance: double = 0.5): int",
+    "documentation": "Calculates the index of the next stop in a given stop list. `overrunTolerance` handles cases where the vehicle slightly passes the mark."
+  },
+  {
+    "label": "isStopsDataFetched",
+    "kind": "Method",
+    "detail": "Vehicle.isStopsDataFetched(): boolean",
+    "documentation": "Returns whether the stop data has been successfully fetched from the server."
+  },
+  {
+    "label": "isClientPlayerRiding",
+    "kind": "Method",
+    "detail": "Vehicle.isClientPlayerRiding(): boolean",
+    "documentation": "Returns true if the local client player is currently riding this vehicle."
+  },
+  {
+    "label": "getSiding",
+    "kind": "Method",
+    "detail": "Vehicle.getSiding(): Siding?",
+    "documentation": "Returns the Siding this vehicle belongs to. Returns null if not referenced or still fetching."
+  },
+  {
+    "label": "getRailProgress",
+    "kind": "Method",
+    "detail": "Vehicle.getRailProgress(carIndex: int = 0): int",
+    "documentation": "Returns the distance in meters the vehicle has traveled since departure. Offsets by car length if `carIndex` is provided."
+  },
+  {
+    "label": "getNotchLevel",
+    "kind": "Method",
+    "detail": "Vehicle.getNotchLevel(): int",
+    "documentation": "Returns the manual notch level (-5 to 5 for normal operation, -8 for Emergency Brake)."
+  },
+  {
+    "label": "getSpeedKmh",
+    "kind": "Method",
+    "detail": "Vehicle.getSpeedKmh(): double",
+    "documentation": "Returns the current vehicle speed in km/h."
+  },
+  {
+    "label": "getDoorValue",
+    "kind": "Method",
+    "detail": "Vehicle.getDoorValue(): double",
+    "documentation": "Returns the door opening progress between 0.0 (Closed) and 1.0 (Opened)."
+  },
+  {
+    "label": "getElapsedDwellTime",
+    "kind": "Method",
+    "detail": "Vehicle.getElapsedDwellTime(): long",
+    "documentation": "Returns the dwell time elapsed so far, synced from the server (in milliseconds)."
+  },
+  {
+    "label": "Stop",
+    "kind": "Class",
+    "detail": "Vehicle Stop Information",
+    "documentation": "Contains data about a specific stop in a vehicle's path, including station, platform, and route info."
+  },
+  {
+    "label": "route",
+    "kind": "Property",
+    "detail": "Stop.route: SimplifiedRoute?",
+    "documentation": "The SimplifiedRoute this stop belongs to. May be null if data is not yet fetched."
+  },
+  {
+    "label": "station",
+    "kind": "Property",
+    "detail": "Stop.station: Station?",
+    "documentation": "The Station this stop belongs to. May be null if data is not yet fetched."
+  },
+  {
+    "label": "destinationName",
+    "kind": "Property",
+    "detail": "Stop.destinationName: String",
+    "documentation": "The destination string displayed for this stop."
+  },
+  {
+    "label": "routeInterchanges",
+    "kind": "Property",
+    "detail": "Stop.routeInterchanges: List<RouteInterchange>",
+    "documentation": "List of other routes interchanging at this station."
+  },
+  {
+    "label": "dwellTimeMillis",
+    "kind": "Property",
+    "detail": "Stop.dwellTimeMillis: long",
+    "documentation": "The dwell time duration of the stop in milliseconds."
+  },
+  {
+    "label": "roundUpRoute",
+    "kind": "Property",
+    "detail": "Stop.roundUpRoute: Stop",
+    "documentation": "Returns a copy of the stop info for the next route if this is a switchover stop; otherwise returns self."
+  },
+  {
+    "label": "RouteInterchange",
+    "kind": "Class",
+    "detail": "Interchanging Route Data",
+    "documentation": "Represents minimal information about a route available for interchange at a station."
+  },
+  {
+    "label": "color",
+    "kind": "Property",
+    "detail": "RouteInterchange.color: int",
+    "documentation": "The RGB integer color of the interchanging route."
+  },
+  {
+    "label": "name",
+    "kind": "Property",
+    "detail": "RouteInterchange.name: String",
+    "documentation": "The name of the interchanging route."
+  }
+]
