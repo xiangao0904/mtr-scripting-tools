@@ -1,194 +1,182 @@
 [
   {
-    "label": "VehicleScriptContext",
+    "label": "create",
+    "kind": "Method",
+    "detail": "Global.create(ctx: PIDSScriptContext, state: object, pids: PIDSBlockEntity): void",
+    "documentation": "Called when a PIDS is rendered for the first time. Used for initialization operations like creating dynamic textures."
+  },
+  {
+    "label": "render",
+    "kind": "Method",
+    "detail": "Global.render(ctx: PIDSScriptContext, state: object, pids: PIDSBlockEntity): void",
+    "documentation": "Called at-most once per frame to draw contents onto the PIDS. Executed in a separate thread."
+  },
+  {
+    "label": "dispose",
+    "kind": "Method",
+    "detail": "Global.dispose(ctx: PIDSScriptContext, state: object, pids: PIDSBlockEntity): void",
+    "documentation": "Called when a PIDS Block goes out of sight. Used for releasing memory and dynamic textures."
+  },
+  {
+    "label": "PIDSScriptContext",
     "kind": "Class",
-    "detail": "Vehicle Scripting Context",
-    "documentation": "The primary context for vehicle scripts, providing methods for rendering, sound, and data management."
+    "detail": "PIDS Script Execution Context",
+    "documentation": "The context object used to pass rendering actions and manage Z-ordering for PIDS scripts."
   },
   {
-    "label": "drawCarModel",
+    "label": "getRenderManager",
     "kind": "Method",
-    "detail": "VehicleScriptContext.drawCarModel(model: Model, carIndex: int, matrices: Matrices?): void",
-    "documentation": "Requests a Model to be drawn. `carIndex` is the car number. If `matrices` is null, the model is placed in the car center without transformation."
+    "detail": "PIDSScriptContext.getRenderManager(): RenderManager",
+    "documentation": "Obtain a RenderManager instance to render custom objects onto the Minecraft World at the block's position."
   },
   {
-    "label": "playCarSound",
+    "label": "setAutoZOrdering",
     "kind": "Method",
-    "detail": "VehicleScriptContext.playCarSound(sound: Identifier, carIndex: int, x: float, y: float, z: float, volume: float, pitch: float): void",
-    "documentation": "Plays a positional sound relative to the car's center. `volume` and `pitch` base value is 1.0."
+    "detail": "PIDSScriptContext.setAutoZOrdering(autoZOrdering: boolean): void",
+    "documentation": "Enable or disable automatic Z-translation between drawing calls to prevent z-fighting."
   },
   {
-    "label": "playAnnSound",
+    "label": "setZOrderStep",
     "kind": "Method",
-    "detail": "VehicleScriptContext.playAnnSound(sound: Identifier, carIndex: int, x: float, y: float, z: float, volume: float, pitch: float): void",
-    "documentation": "Plays a non-positional announcement sound (only if player is boarded). Arguments are identical to `playCarSound`."
+    "detail": "PIDSScriptContext.setZOrderStep(distanceMeter: double): void",
+    "documentation": "Sets the custom translation distance (step) used for automatic Z-ordering. Default is 0.0002."
   },
   {
-    "label": "getCarRenderManager",
-    "kind": "Method",
-    "detail": "VehicleScriptContext.getCarRenderManager(carIndex: int): RenderManager?",
-    "documentation": "Obtain a RenderManager instance for the specified car index. Returns null if the index is not associated with this script entry."
-  },
-  {
-    "label": "getCarSoundManager",
-    "kind": "Method",
-    "detail": "VehicleScriptContext.getCarSoundManager(carIndex: int): SoundManager?",
-    "documentation": "Obtain a SoundManager instance for the specified car index. Returns null if the index is not associated with this script entry."
-  },
-  {
-    "label": "getScriptEntryId",
-    "kind": "Method",
-    "detail": "VehicleScriptContext.getScriptEntryId(): String",
-    "documentation": "Returns the unique ID of the current script entry."
-  },
-  {
-    "label": "getMyCars",
-    "kind": "Method",
-    "detail": "VehicleScriptContext.getMyCars(): int[]",
-    "documentation": "Returns an array of car indexes associated with the current script entry."
-  },
-  {
-    "label": "setDataFetchMode",
-    "kind": "Method",
-    "detail": "VehicleScriptContext.setDataFetchMode(mode: String): void",
-    "documentation": "Sets the Data Fetch Mode. Supported values: 'SKIP', 'ALL', or 'MANDATORY'."
-  },
-  {
-    "label": "setDebugInfo",
-    "kind": "Method",
-    "detail": "VehicleScriptContext.setDebugInfo(key: String, value: object): void",
-    "documentation": "Outputs debugging information to the screen overlay. `value` is converted to string, except for `GraphicsTexture`."
-  },
-  {
-    "label": "Vehicle",
+    "label": "Text",
     "kind": "Class",
-    "detail": "Active Transit Vehicle",
-    "documentation": "Represents the current vehicle being scripted, providing access to its state, pathing, and physical properties."
+    "detail": "PIDS Text Element",
+    "documentation": "Represents a text element to be drawn on the PIDS screen with various alignment and overflow options."
   },
   {
-    "label": "getStops",
+    "label": "create",
     "kind": "Method",
-    "detail": "Vehicle.getStops(): List<Stop>",
-    "documentation": "Returns a list of all stops across all routes assigned to this vehicle."
+    "detail": "Text.create(comment: String = \"\"): Text",
+    "documentation": "Creates a new text object for drawing on the PIDS."
   },
   {
-    "label": "getThisRouteStops",
+    "label": "pos",
     "kind": "Method",
-    "detail": "Vehicle.getThisRouteStops(): List<Stop>",
-    "documentation": "Returns a list of stops for the route currently being run."
+    "detail": "Text.pos(x: double, y: double): Text",
+    "documentation": "Sets the X and Y coordinate position of the text element."
   },
   {
-    "label": "getNextStopIndex",
+    "label": "size",
     "kind": "Method",
-    "detail": "Vehicle.getNextStopIndex(stopList: List<Stop>, overrunTolerance: double = 0.5): int",
-    "documentation": "Calculates the index of the next stop in a given stop list. `overrunTolerance` handles cases where the vehicle slightly passes the mark."
+    "detail": "Text.size(w: double, h: double): Text",
+    "documentation": "Sets the bounding box width and height for the text, used for scaling and overflow mechanisms."
   },
   {
-    "label": "isStopsDataFetched",
+    "label": "text",
     "kind": "Method",
-    "detail": "Vehicle.isStopsDataFetched(): boolean",
-    "documentation": "Returns whether the stop data has been successfully fetched from the server."
+    "detail": "Text.text(str: String): Text",
+    "documentation": "Sets the string content of the text object."
   },
   {
-    "label": "isClientPlayerRiding",
+    "label": "stretchXY",
     "kind": "Method",
-    "detail": "Vehicle.isClientPlayerRiding(): boolean",
-    "documentation": "Returns true if the local client player is currently riding this vehicle."
+    "detail": "Text.stretchXY(): Text",
+    "documentation": "Overflow mechanism: Stretches the text on the overflowing axis to fit within the specified size."
   },
   {
-    "label": "getSiding",
+    "label": "marquee",
     "kind": "Method",
-    "detail": "Vehicle.getSiding(): Siding?",
-    "documentation": "Returns the Siding this vehicle belongs to. Returns null if not referenced or still fetching."
+    "detail": "Text.marquee(duration: double): Text",
+    "documentation": "Overflow mechanism: Automatically scrolls the text horizontally if it exceeds the size."
   },
   {
-    "label": "getRailProgress",
+    "label": "draw",
     "kind": "Method",
-    "detail": "Vehicle.getRailProgress(carIndex: int = 0): int",
-    "documentation": "Returns the distance in meters the vehicle has traveled since departure. Offsets by car length if `carIndex` is provided."
+    "detail": "Text.draw(ctx: PIDSScriptContext): void",
+    "documentation": "Submits the text object to the rendering queue for the current frame."
   },
   {
-    "label": "getNotchLevel",
-    "kind": "Method",
-    "detail": "Vehicle.getNotchLevel(): int",
-    "documentation": "Returns the manual notch level (-5 to 5 for normal operation, -8 for Emergency Brake)."
-  },
-  {
-    "label": "getSpeedKmh",
-    "kind": "Method",
-    "detail": "Vehicle.getSpeedKmh(): double",
-    "documentation": "Returns the current vehicle speed in km/h."
-  },
-  {
-    "label": "getDoorValue",
-    "kind": "Method",
-    "detail": "Vehicle.getDoorValue(): double",
-    "documentation": "Returns the door opening progress between 0.0 (Closed) and 1.0 (Opened)."
-  },
-  {
-    "label": "getElapsedDwellTime",
-    "kind": "Method",
-    "detail": "Vehicle.getElapsedDwellTime(): long",
-    "documentation": "Returns the dwell time elapsed so far, synced from the server (in milliseconds)."
-  },
-  {
-    "label": "Stop",
+    "label": "Texture",
     "kind": "Class",
-    "detail": "Vehicle Stop Information",
-    "documentation": "Contains data about a specific stop in a vehicle's path, including station, platform, and route info."
+    "detail": "PIDS Texture Element",
+    "documentation": "Represents an image/texture element to be drawn on the PIDS screen."
   },
   {
-    "label": "route",
-    "kind": "Property",
-    "detail": "Stop.route: SimplifiedRoute?",
-    "documentation": "The SimplifiedRoute this stop belongs to. May be null if data is not yet fetched."
+    "label": "create",
+    "kind": "Method",
+    "detail": "Texture.create(comment: String = \"\"): Texture",
+    "documentation": "Creates a new texture object for drawing on the PIDS."
   },
   {
-    "label": "station",
-    "kind": "Property",
-    "detail": "Stop.station: Station?",
-    "documentation": "The Station this stop belongs to. May be null if data is not yet fetched."
+    "label": "texture",
+    "kind": "Method",
+    "detail": "Texture.texture(id: Identifier): Texture",
+    "documentation": "Sets the Identifier (Resource Location) for the PNG image or .mcmeta file."
   },
   {
-    "label": "destinationName",
-    "kind": "Property",
-    "detail": "Stop.destinationName: String",
-    "documentation": "The destination string displayed for this stop."
+    "label": "uv",
+    "kind": "Method",
+    "detail": "Texture.uv(u1: float, v1: float, u2: float, v2: float): Texture",
+    "documentation": "Sets the UV coordinates for mapping the texture."
   },
   {
-    "label": "routeInterchanges",
-    "kind": "Property",
-    "detail": "Stop.routeInterchanges: List<RouteInterchange>",
-    "documentation": "List of other routes interchanging at this station."
-  },
-  {
-    "label": "dwellTimeMillis",
-    "kind": "Property",
-    "detail": "Stop.dwellTimeMillis: long",
-    "documentation": "The dwell time duration of the stop in milliseconds."
-  },
-  {
-    "label": "roundUpRoute",
-    "kind": "Property",
-    "detail": "Stop.roundUpRoute: Stop",
-    "documentation": "Returns a copy of the stop info for the next route if this is a switchover stop; otherwise returns self."
-  },
-  {
-    "label": "RouteInterchange",
+    "label": "PIDSBlockEntity",
     "kind": "Class",
-    "detail": "Interchanging Route Data",
-    "documentation": "Represents minimal information about a route available for interchange at a station."
+    "detail": "PIDS Block Data",
+    "documentation": "Provides information about the PIDS hardware (type, size) and current arrival data."
   },
   {
-    "label": "color",
+    "label": "type",
     "kind": "Property",
-    "detail": "RouteInterchange.color: int",
-    "documentation": "The RGB integer color of the interchanging route."
+    "detail": "PIDSBlockEntity.type: String",
+    "documentation": "The type identifier of the PIDS (e.g., 'rv_pids', 'lcd_pids')."
   },
   {
-    "label": "name",
+    "label": "width",
     "kind": "Property",
-    "detail": "RouteInterchange.name: String",
-    "documentation": "The name of the interchanging route."
+    "detail": "PIDSBlockEntity.width: int",
+    "documentation": "The full width of the available PIDS screen area."
+  },
+  {
+    "label": "arrivals",
+    "kind": "Method",
+    "detail": "PIDSBlockEntity.arrivals(): ArrivalEntries",
+    "documentation": "Returns the collection of arrivals currently obtained for this PIDS block."
+  },
+  {
+    "label": "ArrivalEntries",
+    "kind": "Class",
+    "detail": "Arrival Collection",
+    "documentation": "A list of arrival entries stopping at the platforms monitored by the PIDS."
+  },
+  {
+    "label": "get",
+    "kind": "Method",
+    "detail": "ArrivalEntries.get(i: int): ArrivalEntry?",
+    "documentation": "Returns the arrival entry at index i. Returns null if no entry exists."
+  },
+  {
+    "label": "ArrivalEntry",
+    "kind": "Class",
+    "detail": "Single Arrival Data",
+    "documentation": "Contains details about a specific approaching vehicle, including destination, time, and route info."
+  },
+  {
+    "label": "destination",
+    "kind": "Method",
+    "detail": "ArrivalEntry.destination(): String",
+    "documentation": "Returns the name of the destination station or a custom destination string."
+  },
+  {
+    "label": "arrivalTime",
+    "kind": "Method",
+    "detail": "ArrivalEntry.arrivalTime(): long",
+    "documentation": "Returns the epoch time in milliseconds when the vehicle will arrive."
+  },
+  {
+    "label": "carCount",
+    "kind": "Method",
+    "detail": "ArrivalEntry.carCount(): int",
+    "documentation": "Returns the number of cars (carriages) the vehicle consists of."
+  },
+  {
+    "label": "cars",
+    "kind": "Method",
+    "detail": "ArrivalEntry.cars(): List<CarDetails>",
+    "documentation": "Returns a list containing specific details for each individual car of the vehicle."
   }
 ]
