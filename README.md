@@ -9,13 +9,13 @@
 
 ## 🚀 What's New in v0.0.2
 
-We have updated the extension to support the latest scripting standards!
+We have updated the extension to support the latest scripting api with better performance!
 
 - **JCM v2.2.0-beta-2 Compatibility**: Fully updated to match the latest Joban Client Mod specifications.
 - **Enhanced API Support**: 
     - Updated API definitions for **3D models** and **vehicle scripts**.
     - Added new **Eyecandy** and **Vehicle** and **PIDS** API files for autocompletion.
-
+- **Performance Optimizations**：Improved the caching mechanism to reduce latency and resource usage.
 ---
 
 ## Features
