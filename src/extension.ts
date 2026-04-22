@@ -45,8 +45,8 @@ export function activate(context: vscode.ExtensionContext) {
         if (word.toLowerCase() === "api") return "API";
         return word.charAt(0).toUpperCase() + word.slice(1);
       })
-      .join(" ")
-      .replace(/^/, "MTR ");
+      .join(" ");
+      // .replace(/^/, "MTR ");
   }
 
   // --- 优化点 1: 预先缓存所有代码补全项 (避免每次触发都重新创建上千个对象) ---
