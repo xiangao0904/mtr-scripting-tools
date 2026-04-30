@@ -10,9 +10,10 @@
 
 ## 🚀 What's New in v0.0.3 & v0.0.4
 
-We have updated the extension to support the latest scripting api with better performance!
+
 
 - **TypeScript Support**：MTR API completion will also be enabled when you write TypeScript code.
+- **Compatibility**：Fully updated to match the latest Joban Client Mod specifications..
 ---
 
 ## Features
