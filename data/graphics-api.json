@@ -100,5 +100,11 @@
     "kind": "Method",
     "detail": "Graphics.setComposite(comp: Composite): void",
     "documentation": "Sets the Composite for the Graphics2D context (e.g., for transparency/alpha blending)."
+  },
+  {
+  "label": "upload",
+  "kind": "Method",
+  "detail": "GraphicsTexture.upload(x: number, y: number, width: number, height: number): void",
+  "documentation": "Uploads a selected portion of the image to the GPU to conserve performance."
   }
 ]

@@ -76,5 +76,11 @@
     "kind": "Method",
     "detail": "Resources.ensureStrFonts(text: String, primaryFont: Font, fallbackFonts: Font[]): AttributedString",
     "documentation": "Get an AttributedString with font fallback logic to prevent 'Tofu' (empty squares) when rendering text with unsupported characters."
+  },
+  {
+    "label": "getNTEVersion",
+    "kind": "Method",
+    "detail": "Resources.getNTEVersion(): string",
+    "documentation": "Returns the current Minecraft version in use (e.g., '1.19.4' or above), instead of a hard-coded version string."
   }
 ]

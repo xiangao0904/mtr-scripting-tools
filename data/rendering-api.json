@@ -118,5 +118,17 @@
     "kind": "Method",
     "detail": "ModelDrawCall.matrices(matrices: Matrices): ModelDrawCall",
     "documentation": "Supply a Matrices object to apply transformations to the entire model."
+  },
+  {
+  "label": "drawModel",
+  "kind": "Method",
+  "detail": "RenderManager.drawModel(model: Model | DynamicModelHolder, matrices?: Matrices): void",
+  "documentation": "An easy and unified way to draw a model. This replaces ModelDrawCall and all variants of drawModel/drawXXXModel. It is recommended to pass a DynamicModelHolder directly instead of using getUploadedModel() for rendering."
+  },
+  {
+    "label": "modelObject",
+    "kind": "Method",
+    "detail": "ModelDrawCall.modelObject(model: Model | DynamicModelHolder): ModelDrawCall",
+    "documentation": "Specify the Model or DynamicModelHolder object to render."
   }
 ]

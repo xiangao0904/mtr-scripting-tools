@@ -208,5 +208,11 @@
     "kind": "Method",
     "detail": "DynamicModelHolder.close(): void",
     "documentation": "Close the model and release resources. Automatically called if a new upload is requested."
+  },
+  {
+    "label": "asRawModel",
+    "kind": "Method",
+    "detail": "RawMeshBuilder.asRawModel(): RawModel",
+    "documentation": "A quick way to obtain an instance of RawModel. Equivalent to calling new RawModel() and RawModel.append(rawMesh)."
   }
 ]

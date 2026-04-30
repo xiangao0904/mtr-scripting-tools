@@ -190,5 +190,11 @@
     "kind": "Property",
     "detail": "RouteInterchange.name: String",
     "documentation": "The name of the interchanging route."
+  },
+  {
+    "label": "getCarBogieRenderManager",
+    "kind": "Method",
+    "detail": "VehicleScriptContext.getCarBogieRenderManager(): RenderManager",
+    "documentation": "Obtains a RenderManager specifically for rendering with the transformation of the car's bogie."
   }
 ]
